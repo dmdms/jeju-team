@@ -1,0 +1,33 @@
+@mixin padding($x:0, $y:0) {
+    padding: $x $y;
+}
+
+@mixin margin($x:0, $y:0) {
+    margin: $x $y;
+}
+
+@mixin border-all($width: 1px, $type: solid, $color: white) {
+    border: $width $type $color;
+}
+
+@mixin corner-all($radius: 0) {
+    border-radius: $radius;
+}
+
+@mixin corner($top-left: 0, $top-right: 0, $bottom-left: 0, $bottom-right: 0, $radius: 0) {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin flex($dir: center) {
+    display: flex;
+    justify-content: $dir;
+}
+
+@mixin transition($property: all, $speed: .3s, $count: infinite) {
+    transition-property: $property;
+    transition-duration: $speed;
+    transition-timing-function: $count;
+}
