@@ -14,119 +14,6 @@ body {
   color: #333;
 }
 
-.footer-wrap, .header-wrap, header {
-  margin: 0 auto;
-}
-
-.d-none {
-  display: none;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-}
-
-.header-wrap {
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
-}
-
-.logo-wrap {
-  position: relative;
-  width: 100px;
-}
-
-.logo {
-  position: absolute;
-}
-
-.logo img {
-  height: 80px;
-}
-
-#gnb {
-  color: #fff;
-  width: 500px;
-  display: flex;
-  justify-content: space-between;
-  line-height: 77px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#gnb > li:hover {
-  border-bottom: 5px solid #e63462;
-}
-
-.member {
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-  width: 70px;
-  font-size: 1.5rem;
-  line-height: 80px;
-}
-
-.active {
-  background-color: #fff;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.253);
-  transition: all 0.3s ease-in-out;
-}
-
-.topper i {
-  color: #fff;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  font-size: 2.5rem;
-  margin: 20px 30px;
-  background: #e63462;
-  border-radius: 100px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-}
-
-footer {
-  width: 100%;
-  background: #333;
-  color: #ededed;
-}
-
-.footer-wrap {
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 0;
-}
-
-.xnb ul {
-  display: flex;
-  column-gap: 50px;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-address {
-  font-size: 0.8em;
-  line-height: 25px;
-  text-transform: uppercase;
-}
-
-.logo-ft img {
-  width: 120px;
-  opacity: 50%;
-}
-
-.ft-back img {
-  width: 170px;
-  opacity: 50%;
-}
-
 .cart-icon {
   float: right;
   color: #fff;
@@ -191,11 +78,30 @@ address {
   padding: 10px 0;
 }
 
-#modal button {
+.button {
+  height: 40px;
+  width: 300px;
+  display: flex;
+  color: #fff;
+  column-gap: 20px;
+}
+
+#modal button.route {
+  background: #003893;
+  border: 0;
+  padding: 10px 20px;
+  position: absolute;
+  border-radius: 20px;
+  align-items: center;
+  right: 40%;
+  bottom: 50px;
+}
+
+#modal button.out {
   color: #fff;
   background: #003893;
   border: 0;
-  padding: 10px 30px;
+  padding: 10px 20px;
   position: absolute;
   border-radius: 20px;
   align-items: center;
@@ -275,4 +181,4 @@ address {
   padding-top: 50px;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=basket.css.map */

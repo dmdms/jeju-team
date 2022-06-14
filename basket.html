@@ -7,7 +7,36 @@
     <script src="https://kit.fontawesome.com/c3e7a3c02b.js" crossorigin="anonymous"></script>
     <title>장바구니</title>
     <script src="script/jquery-1.12.4.min.js"></script>
-    <link rel="stylesheet" href="css-heeji/main.css">
+    <link rel="stylesheet" href="css-heeji/basket.css">
+    <style>
+        #btn1{
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: 0;
+            margin-top: 100px;
+            margin-left: 170px;
+            padding: 10px 20px;
+            background: #003893;
+            color: #fff;
+        }
+        #btn2{
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: 0;
+            padding: 10px 20px;
+            background: #003893;
+            color: #fff;
+        }
+        #btn-group button:hover{
+            color: #003893;
+            background: white;
+            border: 2px solid lightgrey ;
+        }
+    </style>
 </head>
 <body>
     <div class="cart-icon"><a href="basket.html"><i class="fa-solid fa-basket-shopping"></i></a></div>
@@ -62,7 +91,10 @@
             </ul>
             <div class="cancel"><a href="#"><i class="fa-solid fa-xmark"></i></a></div>
         </div>
-        <button>checkout</button>
+        <div id="btn-group">
+            <button id="btn1">경로탐색</button>
+            <button id="btn2">닫기</button>
+        </div>
     </div>
     <script src="script/main.js"></script>
 </body>

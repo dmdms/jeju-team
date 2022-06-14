@@ -22,7 +22,7 @@ function popup(){
     $(".cart-icon").click(function(){
         $("#modal").show();
     });
-    $("#modal button").click(function(){
+    $("#modal button#btn2").click(function(){
         $("#modal").hide();
     });
 }
