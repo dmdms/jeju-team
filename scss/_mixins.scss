@@ -31,3 +31,11 @@
     transition-duration: $speed;
     transition-timing-function: $count;
 }
+
+@mixin box-shadow ($x-position: 0, $y-position: 0, $blur: 1rem, $spread: 0, $color: rgba(0, 0, 0, 0.4)) {
+    box-shadow: $x-position $y-position $blur $spread $color;
+}
+
+@mixin text-shadow ($offset-x: 2px, $offset-y: 2px, $blur-radius: 4px, $color: #444){
+    text-shadow: $offset-x $offset-y $blur-radius $color;
+}

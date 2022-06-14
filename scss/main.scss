@@ -87,7 +87,7 @@ address {
 .ft-back img {width: 170px; opacity: 50%;}
 
 
-// map
+// ========== map ==========
 
 %map-bg {
     width: 100%;
@@ -113,10 +113,17 @@ address {
 #map {
     width: 430px;
     height: 400px;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
+    @include mixins.box-shadow;
 }
-.map-info img{
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
+.info-wrap {
+    height: 400px;
+    overflow: hidden;
+}
+// .map-info, .map-info2, .map-info3, .map-info4, .map-info5 {
+//     height: 400px;
+// }
+.map-info img, .map-info2 img, .map-info3 img, .map-info4 img, .map-info5 img{
+    @include mixins.box-shadow;
 }
 .info-text {
     color: $base-font-color;
@@ -125,7 +132,8 @@ address {
     padding: 10px 10px;
 }
 .info-text-wrap p {
-    padding: 0 10px;
+    padding: 1px 10px;
+    font-size: 13px;
 }
 .info-text h3 {
     font-size: 22px;
@@ -138,5 +146,41 @@ address {
 }
 .fa-solid {
     width: 24px;
+    
 }
 
+
+// ========== guide ==========
+.guide-top img {
+    width: 100%;
+    position: relative;
+}
+.top-text {
+    position: absolute;
+    color: $base-font-color;
+    z-index: 10;
+    top: 20%;
+    left: 5%;
+    font-weight: bold;
+    @include mixins.text-shadow;
+    border-left: 9px solid #fff;
+}
+.top-text h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    padding: 0 0 5px 13px;
+}
+.top-text p {
+    font-size: 18px;
+    padding: 0 0 5px 15px;
+}
+
+.home-guide {
+    display: flex;
+    width: 100%;
+    height: 20px;
+    border-left: #333;
+}
+.home-guide img {
+    width: 20px;
+}

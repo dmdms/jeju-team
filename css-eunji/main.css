@@ -158,7 +158,12 @@ address {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
 }
 
-.map-info img {
+.info-wrap {
+  height: 400px;
+  overflow: hidden;
+}
+
+.map-info img, .map-info2 img, .map-info3 img, .map-info4 img, .map-info5 img {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -170,7 +175,8 @@ address {
 }
 
 .info-text-wrap p {
-  padding: 0 10px;
+  padding: 1px 10px;
+  font-size: 13px;
 }
 
 .info-text h3 {
@@ -186,6 +192,44 @@ address {
 
 .fa-solid {
   width: 24px;
+}
+
+.guide-top img {
+  width: 100%;
+  position: relative;
+}
+
+.top-text {
+  position: absolute;
+  color: #fff;
+  z-index: 10;
+  top: 20%;
+  left: 5%;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #444;
+  border-left: 9px solid #fff;
+}
+
+.top-text h2 {
+  font-size: 35px;
+  text-transform: uppercase;
+  padding: 0 0 5px 13px;
+}
+
+.top-text p {
+  font-size: 18px;
+  padding: 0 0 5px 15px;
+}
+
+.home-guide {
+  display: flex;
+  width: 100%;
+  height: 20px;
+  border-left: #333;
+}
+
+.home-guide img {
+  width: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
