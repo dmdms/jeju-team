@@ -128,6 +128,8 @@ address {
   opacity: 50%;
 }
 
+/* map */
+
 .main-map {
   width: 100%;
   height: 650px;
@@ -194,6 +196,9 @@ address {
   width: 24px;
 }
 
+
+/* theme */
+
 .theme-wrap {
   background: #dde0e6;
 }
@@ -201,6 +206,15 @@ address {
 .theme-text {
   display: flex;
   justify-content: center;
+}
+
+.theme-text {
+  font-size: 18px;
+  column-gap: 10px;
+}
+
+.theme-text h2 {
+  font-weight: bold;
 }
 
 .theme-img img {
@@ -269,6 +283,8 @@ address {
   font-size: 3rem;
   color: #ccc;
 }
+
+/* guide */
 
 .guide-top img {
   width: 100%;
