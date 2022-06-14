@@ -25,6 +25,7 @@ body {
 header {
   position: fixed;
   width: 100%;
+  z-index: 10;
 }
 
 .header-wrap {
@@ -139,6 +140,7 @@ address {
   color: #fff;
   column-gap: 10px;
   padding: 5rem 0 4rem 0;
+  font-size: 18px;
 }
 
 .map-text h2 {
@@ -147,28 +149,43 @@ address {
 
 .map-wrap {
   display: flex;
+  justify-content: center;
 }
 
 #map {
   width: 430px;
-  height: 430px;
+  height: 400px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
+}
+
+.map-info img {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
 }
 
 .info-text {
   color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 10px 5px;
+  padding: 10px 10px;
 }
 
-.info-text p {
-  font-size: 20px;
+.info-text-wrap p {
+  padding: 0 10px;
+}
+
+.info-text h3 {
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .info-text-wrap {
   color: #fff;
   max-width: 440px;
   padding: 0 5px;
+}
+
+.fa-solid {
+  width: 24px;
 }
 
 /*# sourceMappingURL=main.css.map */

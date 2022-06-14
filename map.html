@@ -50,14 +50,35 @@
         </div>
         <div class="map-wrap">
             <div id="map"></div>
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=84855f7dbe2c82247dc168f4fcd796f2"></script>
+            <script>
+                var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                    mapOption = { 
+                        center: new kakao.maps.LatLng(33.389223094865024, 126.24007284642093), // 지도의 중심좌표
+                        level: 3 // 지도의 확대 레벨
+                    };
+
+                var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+                // 마커가 표시될 위치입니다 
+                var markerPosition  = new kakao.maps.LatLng(33.389223094865024, 126.24007284642093); 
+
+                // 마커를 생성합니다
+                var marker = new kakao.maps.Marker({
+                    position: markerPosition
+                });
+
+                // 마커가 지도 위에 표시되도록 설정합니다
+                marker.setMap(map);
+            </script>
             <div class="map-info">
-                <a href="#"><img src="images-eunji/map-side.png" alt="한림공원"></a>
+                <a href="#"><img src="images-eunji/map-side.png" alt="한림공원" ></a>
                 <div class="info-text-wrap">
                     <div class="info-text">
-                        <p>한림 공원</p>
-                        <a href="#"><img src="images-eunji/add.png" alt=""></a>
+                        <h3>한림 공원</h3>
+                        <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, soluta?</p>
+                    <p>다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.</p>
                 </div>
             </div>
         </div>
@@ -88,6 +109,9 @@
         </div>
     </footer>
     <script src="script/main.js"></script>
+<<<<<<< HEAD
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=84855f7dbe2c82247dc168f4fcd796f2"></script>
+=======
+>>>>>>> 8cc985ea97df8cf30709c2b6ba48d8f709e2cfaa
 </body>
 </html>
