@@ -194,6 +194,82 @@ address {
   width: 24px;
 }
 
+.theme-wrap {
+  background: #dde0e6;
+}
+
+.theme-text {
+  display: flex;
+  justify-content: center;
+}
+
+.theme-img img {
+  width: 500px;
+}
+
+.cont-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.theme-info2 {
+  display: none;
+}
+
+.theme-info3 {
+  display: none;
+}
+
+.theme-info4 {
+  display: none;
+}
+
+.theme-bg {
+  border: 1px solid #fff;
+  background: #fff;
+  width: 740px;
+  height: 303px;
+  position: absolute;
+  border-top-left-radius: 50px;
+}
+
+.info-wrap {
+  z-index: 100;
+  padding-right: 10rem;
+}
+
+.info-wrap h3 {
+  padding: 3rem 0 0 0;
+  font-size: 13px;
+}
+
+.info-wrap h2 {
+  padding: 1rem 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.info-wrap p {
+  font-size: 14px;
+  padding: 0.3rem 0;
+}
+
+.text-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.theme-heart {
+  padding-top: 3rem;
+  font-size: 1.2rem;
+}
+
+.theme-plus {
+  padding-top: 2rem;
+  font-size: 3rem;
+  color: #ccc;
+}
+
 .guide-top img {
   width: 100%;
   position: relative;
