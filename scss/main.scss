@@ -1,0 +1,132 @@
+@use "base";
+@use "mixins";
+
+$base-color-dark : #333;
+$base-color-gray : #ededed;
+$point-color-blue : #003893;
+$point-color-pink : #e63462;
+$base-font-color : #fff;
+$limit: 1200px;
+$font-stack : Noto-Sans KR;
+%margin-auto {margin: 0 auto;};
+
+// ===================================================================
+
+.d-none {display: none;}
+
+header {
+    position: fixed;
+    width: 100%;
+    @extend %margin-auto;
+}
+.header-wrap {
+    width: $limit;
+    @extend %margin-auto;
+    @include mixins.flex($dir:space-between);
+    height: 80px;
+}
+.logo-wrap {position: relative; width: 100px;}
+.logo {position: absolute;}
+.logo img {height: 80px;}
+#gnb {
+    color: $base-font-color;
+    width: 500px;
+    @include mixins.flex($dir:space-between);
+    line-height: 77px;
+    font-size: 20px; font-weight: bold;
+}
+#gnb > li:hover {
+    border-bottom: 5px solid $point-color-pink;
+}
+.member {
+    @include mixins.flex($dir:space-between);
+    color: $base-font-color;
+    width: 70px;
+    font-size: 1.5rem;
+    line-height: 80px;
+}
+.active {
+    background-color: $base-font-color;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.253);
+    transition: all .3s ease-in-out;
+}
+.topper i {
+    color: $base-font-color;
+    position: fixed; right: 0; bottom: 0;
+    font-size: 2.5rem;
+    @include mixins.margin($x:20px, $y:30px);
+    background : $point-color-pink;
+    @include mixins.corner-all($radius: 100px);
+    width: 50px; height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+footer {
+    width: 100%; background: $base-color-dark; 
+    color: $base-color-gray
+}
+.footer-wrap {
+    width: $limit;
+    @extend %margin-auto;
+    @include mixins.flex($dir:space-between);
+    padding: 30px 0;
+}
+.xnb ul {
+    display: flex; 
+    column-gap: 50px; 
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+address {
+    font-size: 0.8em; line-height: 25px; 
+    text-transform: uppercase;
+}
+.logo-ft img {width: 120px; opacity: 50%;}
+.ft-back img {width: 170px; opacity: 50%;}
+
+
+// map
+
+%map-bg {
+    width: 100%;
+    height: 650px;
+    background: url(../images-eunji/main-mapbg.jpg) no-repeat center/cover;
+}
+.main-map {
+    @extend %map-bg;
+}
+.map-text {
+    @include mixins.flex;
+    color: $base-font-color;
+    column-gap: 10px;
+    padding: 5rem 0 4rem 0;
+}
+.map-text h2 {
+    font-weight: bold;
+}
+.map-wrap {
+    display: flex;
+}
+// .map-info {
+
+// }
+#map {
+    width: 430px;
+    height: 430px;
+}
+.info-text {
+    color: $base-font-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+}
+.info-text p {
+    font-size: 20px;
+}
+.info-text-wrap {
+    color: $base-font-color;
+    max-width: 440px;
+    padding: 0 5px;
+}
+
