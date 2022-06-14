@@ -1,0 +1,226 @@
+@use "reset";
+@use "mixins";
+
+$base-color-dark : #333;
+$base-color-gray : #ededed;
+$point-color-blue : #003893;
+$point-color-pink : #e63462;
+$base-font-color : #fff;
+$limit: 1200px;
+
+%margin-auto {margin: 0 auto;};
+
+// ===================================================================
+
+.d-none {display: none;}
+
+header {
+    position: fixed;
+    width: 100%;
+    @extend %margin-auto;
+}
+.header-wrap {
+    width: $limit;
+    @extend %margin-auto;
+    @include mixins.flex($dir:space-between);
+    height: 80px;
+}
+.logo-wrap {position: relative; width: 100px;}
+.logo {position: absolute;}
+.logo img {height: 80px;}
+#gnb {
+    color: $base-font-color;
+    width: 500px;
+    @include mixins.flex($dir:space-between);
+    line-height: 77px;
+    font-size: 20px; font-weight: bold;
+}
+#gnb > li:hover {
+    border-bottom: 5px solid $point-color-pink;
+}
+.member {
+    @include mixins.flex($dir:space-between);
+    color: $base-font-color;
+    width: 70px;
+    font-size: 1.5rem;
+    line-height: 80px;
+}
+.active {
+    background-color: $base-font-color;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.253);
+    transition: all .3s ease-in-out;
+}
+.topper i {
+    color: $base-font-color;
+    position: fixed; right: 0; bottom: 0;
+    font-size: 2.5rem;
+    @include mixins.margin($x:20px, $y:30px);
+    background : $point-color-pink;
+    @include mixins.corner-all($radius: 100px);
+    width: 50px; height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+footer {
+    width: 100%; background: $base-color-dark; 
+    color: $base-color-gray
+}
+.footer-wrap {
+    width: $limit;
+    @extend %margin-auto;
+    @include mixins.flex($dir:space-between);
+    padding: 30px 0;
+}
+.xnb ul {
+    display: flex; 
+    column-gap: 50px; 
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+address {
+    font-size: 0.8em; line-height: 25px; 
+    text-transform: uppercase;
+}
+.logo-ft img {width: 120px; opacity: 50%;}
+.ft-back img {width: 170px; opacity: 50%;}
+
+// basket modal
+.cart-icon {
+    float: right;
+    width: 70px;
+    font-size: 1.5rem;
+    line-height: 80px;
+}
+
+#modal {
+    width: 600px;
+    height: 800px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    z-index: 100;
+    position: absolute;
+    box-sizing: border-box;
+    box-shadow: 0 0 1rem 0 rgba($color: lightgray, $alpha: 1.0);
+}
+#modal h2 {
+    padding-bottom: 30px;
+}
+.info {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+.info2 {
+    font-size: .850em;
+    font-weight: lighter;
+}
+.list-cart {
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 10px;
+
+}
+.cart-text
+{
+    padding-left: 30px;
+    column-gap: 30px;
+    width: calc(100%/2);
+    display: flex;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: .850em;
+}
+.cart-title p {
+    width: 60px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    font-size: .850em;
+    font-weight: normal;
+    padding: 10px 0;
+}
+#modal button {
+    color: $base-font-color;
+    background: $point-color-blue;
+    border: 0;
+    padding: 10px 30px;
+    position: absolute;
+    border-radius: 20px;
+    align-items: center;
+    right: 40%;
+    bottom: 50px;
+}
+.cancel{
+    padding-left: 60px;
+    padding-top: 40px;
+}
+.list-museum {
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 20px;
+
+}
+.museum-text
+{
+    padding-left: 30px;
+    column-gap: 30px;
+    width: calc(100%/2);
+    display: flex;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: .850em;
+}
+.museum-title p {
+    width: 50px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 10px 5px;
+    font-size: .850em;
+    font-weight: normal;
+    
+}
+.cancel{
+    padding-left: 60px;
+    padding-top: 50px;
+}
+.list-hotel {
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
+.hotel-text
+{
+    padding-left: 30px;
+    column-gap: 30px;
+    width: calc(100%/2);
+    display: flex;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: .850em;
+}
+.hotel-title p {
+    width: 50px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 10px 5px;
+    font-size: .850em;
+    font-weight: normal;
+    
+}
+.cancel{
+    padding-left: 60px;
+    padding-top: 50px;
+}
+
