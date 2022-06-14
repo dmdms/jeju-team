@@ -1,6 +1,7 @@
 
 $(function(){
     scrollmenu();
+    tabMenu();
 })
 
 function scrollmenu(){
@@ -19,3 +20,25 @@ function scrollmenu(){
     })
 }
 
+function tabMenu(){
+    $(".t-icon1").click(function(){
+        $(".theme-img1").show();
+        $(".theme-img2").hide();
+        $(".theme-img3").hide();
+        $(".theme-img4").hide();
+        $(".theme-info1").show();
+        $(".theme-info2").hide();
+        $(".theme-info3").hide();
+        $(".theme-info4").hide();
+    });
+    $(".t-icon2").click(function(){
+        $(".theme-img1").hide();
+        $(".theme-img2").show();
+        $(".theme-img3").hide();
+        $(".theme-img4").hide();
+        $(".theme-info1").hide();
+        $(".theme-info2").show();
+        $(".theme-info3").hide();
+        $(".theme-info4").hide();
+    })
+}

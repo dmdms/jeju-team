@@ -157,12 +157,22 @@ address {
 .theme-text {
     @include mixins.flex;
 }
+.theme-text {
+    font-size:18px;
+    column-gap: 10px;
+}
+.theme-text h2 {
+    font-weight: bold;
+}
 .theme-img img {
     width: 500px;
 }
 .cont-wrap {
     display: flex;
     justify-content: flex-end;
+}
+.theme-img2, .theme-img3, .theme-img4 {
+    display: none;
 }
 .theme-info2 {
     display: none;
