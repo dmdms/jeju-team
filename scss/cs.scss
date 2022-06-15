@@ -1,0 +1,83 @@
+@use "base";
+@use "mixins";
+
+$base-color-dark : #333;
+$base-color-gray : #ededed;
+$point-color-blue : #003893;
+$point-color-pink : #e63462;
+$base-font-color : #fff;
+$base-font-size : 16px;
+$limit: 1200px;
+%margin-auto {margin: 0 auto;};
+
+// ===================================================================
+
+
+// ========== guide ==========
+.guide-top img {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.top-text-wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+.top-text {
+    position: absolute;
+    color: $base-font-color;
+    z-index: 10;
+    top: 20%;
+    font-weight: bold;
+    @include mixins.text-shadow;
+    border-left: 9px solid #fff;
+}
+.top-text h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    padding: 0 0 5px 13px;
+}
+.top-text p {
+    font-size: 18px;
+    padding: 0 0 5px 15px;
+}
+.home-cs {
+    display: flex;
+    width: 100%;
+    height: 20px;
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+    align-items: center;
+}
+.home-cs img {
+    width: 20px;
+    padding: 11px 2rem 11px 5rem;
+    border-right: 1px solid #333;
+}
+.home-cs-text {
+    display: flex;
+    padding-left: 2rem;
+    column-gap: .7rem;
+    font-size: 14px;
+}
+.cs-text {
+    text-align: center;
+    margin: 5rem 0;
+    color: $base-color-dark;
+}
+.cs-text h2 {
+    font-size: 24px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.cs-guide {
+    width: 800px;
+    margin: 0 auto;
+
+}
+.cs-guide img {
+    border-radius: 50px;
+}
+.cs-guide a:hover {
+    transition: all ease-in-out .3s;
+}
