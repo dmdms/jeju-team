@@ -11,10 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    
     <title>에디트립</title>
     <link rel="stylesheet" href="css-eunji/main.css">
+    <link rel="stylesheet" href="css-eunji/guide.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
@@ -34,8 +33,8 @@
                 </ul>
             </nav>
             <ul class="member">
-                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-                <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+                <li><a href="#"  onclick="return false"><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href="#"  onclick="return false"><i class="fa-regular fa-user"></i></a></li>
             </ul>
         </div>
     </header>
@@ -49,79 +48,94 @@
     </div>
     <div class="home-guide">
         <a href="index.html"><img src="images-eunji/ant-design_home-filled.png" alt="홈"></a>
-        <p>홈</p>
-        <p>&gt;</p>
-        <p>가이드</p>
+        <div class="home-guide-text">
+            <p><a href="index.html">홈</a></p>
+            <p>&gt;</p>
+            <p><a href="guide.html">가이드</a></p>
+        </div>
     </div>
     <div class="guide-text">
         <h2>에디트립 가이드</h2>
         <p>에디트립 이용 방법을 알려드립니다.</p>
     </div>
     <div class="guide-img1">
-        <img src="images-eunji/guide-cont1.jpg" alt="가이드 1">
         <div class="gimg1-text">
             <h3>제주 여행 고민하지 마세요!</h3>
+            <hr>
             <p>에디트립과 함께라면 제주도 여행 계획 걱정은 끝!</p>
             <p>여행지 검색부터 스케줄표 생성까지 에디트립에서 해결하세요.</p>
         </div>
+        <img src="images-eunji/guide-cont1.jpg" alt="가이드 1">
     </div>
     <div class="guide-img2">
-        <img src="images-eunji/guide-cont2.png" alt="가이드 2">
-        <div class="gimg2-text">
-            <h3>에디트립으로 간단하게</h3>
-            <h4>여행지를 담고, 경로를 탐색하고, 스케줄표를 생성하세요. <br> 제주 여행이 쉬워집니다.</h4>
-            <p>원하는 여행지 검색부터 추천 여행지, 인기 여행지, 테마별 여행지를 만나보실 수 있습니다. <br>
-                클릭 한 번으로 이 모든 여행지의 경로를 한 눈에 알아보고, 스케줄표에 추가하세요.</p>
+        <div class="guide2-wrap">
+            <div class="gimg2-text">
+                <h3>에디트립으로 간단하게</h3>
+                <h4>여행지를 담고, 경로를 탐색하고, 스케줄표를 생성하세요. <br> 제주 여행이 쉬워집니다.</h4>
+                <div class="guide2-img"><img src="images-eunji/guide-cont2.png" alt="가이드 2"></div>
+                <p>원하는 여행지 검색부터 추천 여행지, 인기 여행지, 테마별 여행지를 만나보실 수 있습니다. <br>
+                    클릭 한 번으로 이 모든 여행지의 경로를 한 눈에 알아보고, 스케줄표에 추가하세요.</p>
+                </div>
         </div>
     </div>
     <div class="guide-img3">
+        <div class="gtext-wrap">
+            <div class="gimg3-text1">
+                <h3>여행지 담기</h3>
+                <p>
+                    마음에 드는 여행지를 검색하거나 리스트 페이지에서 골라보세요. <br>
+                    인기 여행지와 추천 여행지는 물론 함께 여행하는 사람에 맞춘 여행지도 살펴보실 수 있습니다. <br>
+                    <br>
+                    만약 그 여행지가 마음에 들었다면 하트 모양의 찜하기 버튼을 눌러 
+                    장바구니에 담아보세요.<br> 담긴 리스트는 오른쪽 상단 버튼을 눌러 확인하실 수 있습니다.<br>
+                    장바구니에서 여행지를 누르면 자세한 정보를 확인하실 수도 있습니다.
+                    <br><br>
+                    가고 싶은 곳, 고민 되는 곳, 궁금한 곳 모두 담아보세요.
+                </p>
+            </div>
+            <div class="g-line"></div>
+            <div class="gimg3-text2">
+                <h3>경로 탐색</h3>
+                <p>
+                    여행지를 내 장바구니에 담았다면, 담긴 여행지를 어떻게 가는지 알아볼 차례입니다. <br>
+                    출발지와 도착지를 입력하면 에디트립이 경로를 탐색해줍니다. <br><br>
+                    가는 길은 물론 얼마나 걸리는지, 교통 수단에 따른 경로 등
+                    혼자 알아보기 번거로웠던 정보들을 편리하게 제공합니다.<br>
+                    <br>
+                    직접 여기저기 돌아다니며 알아봐야 했던 불편함은 줄이고,<br>
+                    한 번에 해결할 수 있는 에디트립의 경로 탐색 서비스를 이용해보세요.
+                </p>
+            </div>
+            <div class="g-line"></div>
+            <div class="gimg3-text3">
+                <h3>스케줄표 생성</h3>
+                <p>
+                    여행지를 담아 경로 탐색까지 모두 마쳤다면 이제 에디트립의 스케줄표를 만나실 수 있습니다. <br>
+                    <br>
+                    경로를 탐색한 뒤에 스케줄표 생성을 선택하면, <br>
+                    에디트립이 여행지들을 모두 종합해 효율적인 스케줄표를 제공합니다. <br> 
+                    바쁜 일상 속에서 여행 계획까지 모두 짜기란 힘든 일이지만,
+                    에디트립의 스케줄표와 함께라면 아주 간단하게 스케줄표를 생성하실 수 있습니다.<br> 
+                    이렇게 완성된 스케줄표를 동행인 또는 친구들과 함께 공유하세요.<br>
+                    <br>
+                    에디트립과 함께 즐거운 제주 여행을 즐겨보세요. <br>
+                </p>
+        </div>
+        </div>
         <img src="images-eunji/guide-cont3.jpg" alt="가이드 3">
-        <div class="gimg3-text1">
-            <h3>여행지 담기</h3>
-            <p>
-                마음에 드는 여행지를 검색하거나 리스트 페이지에서 골라보세요. <br>
-                만약 그 여행지가 마음에 들었다면 하트 모양의 찜하기 버튼을 눌러 <br>
-                장바구니에 담아보세요. 담긴 리스트는 오른쪽 상단 버튼을 눌러 확인하실 수 있습니다.<br>
-                <br>
-                가고 싶은 곳, 고민 되는 곳, 궁금한 곳 모두 담아보세요.
-            </p>
-        </div>
-        <div class="gimg3-text2">
-            <h3>경로 탐색</h3>
-            <p>
-                여행지를 내 장바구니에 담았다면, 담긴 여행지를 어떻게 가는지 알아볼 차례입니다. <br>
-                출발지와 도착지를 입력하면 에디트립이 경로를 탐색해줍니다. <br>
-                가는 길은 물론 얼마나 걸리는지, 교통 수단에 따른 경로 등<br>
-                혼자 알아보기 번거로웠던 정보들을 편리하게 제공합니다.<br>
-                <br>
-                직접 여기저기 돌아다니며 알아봐야 했던 불편함은 줄이고,<br>
-                한 번에 해결할 수 있는 에디트립의 경로 탐색 서비스를 이용해보세요.
-            </p>
-        </div>
-        <div class="gimg3-text3">
-            <h3>스케줄표 생성</h3>
-            <p>
-                여행지를 담아 경로 탐색까지 모두 마쳤다면 이제 에디트립의 스케줄표를 만나실 수 있습니다. <br>
-                <br>
-                경로를 탐색한 뒤에 스케줄표 생성을 선택하면, <br>
-                에디트립이 여행지들을 모두 종합해 효율적인 스케줄표를 제공합니다. <br> 
-                바쁜 일상 속에서 여행 계획까지 모두 짜기란 힘들지만 <br>
-                에디트립의 스케줄표와 함께라면 아주 간단하게 스케줄표를 생성하실 수 있습니다.<br> 
-                이렇게 완성된 스케줄표를 동행인 또는 친구들과 함께 공유하세요.<br>
-                <br>
-                이렇듯 에디트립과 함께하면 제주 여행이 쉽고 간편해집니다. <br>
-                에디트립과 함께 즐거운 제주 여행을 즐겨보세요. <br>
-            </p>
-        </div>
     </div>
     <div class="review">
         <h2>에디트립 이용 후기</h2>
         <p>에디트립 이용자의 생생한 실제 후기를 살펴보세요.</p>
         <div class="review-img">
-            <img src="images-eunji/review1.png" alt="리뷰1">
-            <img src="images-eunji/review2.png" alt="리뷰2">
-            <img src="images-eunji/review4.png" alt="리뷰3">
-            <img src="images-eunji/review3.png" alt="리뷰4">
+            <div class="review-wrap1">
+                <img src="images-eunji/review1.png" alt="리뷰1">
+                <img src="images-eunji/review2.png" alt="리뷰2">
+            </div>
+            <div class="review-wrap2">
+                <img src="images-eunji/review4.png" alt="리뷰3">
+                <img src="images-eunji/review3.png" alt="리뷰4">
+            </div>
         </div>
     </div>
     <div class="guide-sns">
@@ -142,9 +156,9 @@
             <div class="footer-info">
                 <div class="xnb">
                     <ul>
-                        <li><a href="#">개인정보취급방침</a></li>
-                        <li><a href="#">이용약관</a></li>
-                        <li><a href="#">이메일무단수집거부</a></li>
+                        <li><a href="#" onclick="return false">개인정보취급방침</a></li>
+                        <li><a href="#" onclick="return false">이용약관</a></li>
+                        <li><a href="#" onclick="return false">이메일무단수집거부</a></li>
                     </ul>
                 </div>
                 <address>
@@ -154,7 +168,7 @@
                     <div class="logo-ft"><img src="images-eunji/logo.png" alt=""></div>
                 </address>
             </div>
-            <div class="ft-back"><img src="images-eunji/logo-ft.png" alt=""></div>
+            <div class="ft-back" ><img src="images-eunji/logo-ft.png" alt=""></div>
         </div>
     </footer>
     <script src="script/main.js"></script>
