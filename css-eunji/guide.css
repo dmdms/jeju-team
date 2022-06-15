@@ -20,12 +20,16 @@ body {
   position: relative;
 }
 
+.top-text-wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .top-text {
   position: absolute;
   color: #fff;
   z-index: 10;
   top: 20%;
-  left: 5%;
   font-weight: bold;
   text-shadow: 2px 2px 4px #444;
   border-left: 9px solid #fff;
@@ -175,13 +179,13 @@ body {
 
 .gimg3-text1 h3, .gimg3-text2 h3, .gimg3-text3 h3 {
   padding-bottom: 2rem;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
 }
 
 .gimg3-text1 p, .gimg3-text2 p, .gimg3-text3 p {
   line-height: 25px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .review {
@@ -197,6 +201,31 @@ body {
 
 .review p {
   padding-bottom: 2rem;
+}
+
+.guide-sns {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.gsns-wrap h2 {
+  font-size: 24px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.gsns-wrap p {
+  padding-bottom: 2rem;
+}
+
+.sns-icons img {
+  padding: 0 20px;
+  width: 100px;
+}
+
+.sns-icons a:hover {
+  opacity: 50%;
+  transition: all ease-in-out 0.3s;
 }
 
 /*# sourceMappingURL=guide.css.map */

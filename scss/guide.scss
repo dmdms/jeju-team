@@ -19,12 +19,15 @@ $limit: 1200px;
     height: 400px;
     position: relative;
 }
+.top-text-wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
 .top-text {
     position: absolute;
     color: $base-font-color;
     z-index: 10;
     top: 20%;
-    left: 5%;
     font-weight: bold;
     @include mixins.text-shadow;
     border-left: 9px solid #fff;
@@ -154,12 +157,12 @@ $limit: 1200px;
 }
 .gimg3-text1 h3, .gimg3-text2 h3, .gimg3-text3 h3 {
     padding-bottom: 2rem;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 .gimg3-text1 p, .gimg3-text2 p, .gimg3-text3 p {
     line-height: 25px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 // review
@@ -175,4 +178,27 @@ $limit: 1200px;
 }
 .review p {
     padding-bottom: 2rem;
+}
+
+// sns
+
+.guide-sns {
+    text-align: center;
+    margin: 5rem 0;
+}
+.gsns-wrap h2{
+    font-size: 24px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.gsns-wrap p {
+    padding-bottom: 2rem;
+}
+.sns-icons img {
+    padding: 0 20px;
+    width: 100px;
+}
+.sns-icons a:hover {
+    opacity: 50%;
+    transition: all ease-in-out .3s;
 }
