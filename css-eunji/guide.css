@@ -236,8 +236,12 @@ body {
   transition: all ease-in-out 0.3s;
 }
 
+.mySwiper {
+  display: none;
+}
+
 /* media */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
   .body {
     max-width: 375px;
     overflow: hidden;
@@ -282,22 +286,48 @@ body {
   .guide-img1, .guide-img2, .guide-img3 {
     display: none;
   }
-  .mguide-img {
+
+  /* slide */
+  .swiper {
     display: block;
-    font-size: 0;
   }
-  .guide-text h2, .review h2, .gsns-wrap h2 {
-    font-size: 18px;
-  }
-  .guide-text p, .review p, .gsns-wrap p {
-    font-size: 12px;
-  }
-  .mguide-img {
-    overflow: hidden;
-  }
-  .mguide-img img {
+  .swiper {
     width: 375px;
   }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-button-next:after{
+    color: #fff;
+    opacity: 70%;
+  }
+  .swiper-button-prev:after {
+    color: #fff;
+    opacity: 50%;
+  }
+
+
   .mg-images {
     position: relative;
     display: flex;

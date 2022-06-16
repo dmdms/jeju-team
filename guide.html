@@ -14,6 +14,7 @@
     <title>에디트립</title>
     <link rel="stylesheet" href="css-eunji/main.css">
     <link rel="stylesheet" href="css-eunji/guide.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
@@ -128,18 +129,16 @@
         </div>
         <img src="images-eunji/guide-cont3.jpg" alt="가이드 3">
     </div>
-
-    <div class="mg-icons">
-        <i class="fa-solid fa-angle-left mg-left"></i>
-        <i class="fa-solid fa-angle-right mg-right"></i>
-    </div>
-    <div class="mguide-img">
-        <div class="mg-images">
-          <img src="images-eunji/mguide-img1.jpg" alt="가이드 1">
-          <img src="images-eunji/mguide-img2.jpg" alt="가이드 2">
-          <img src="images-eunji/mguide-img3.jpg" alt="가이드 3">
+    
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images-eunji/mguide-img1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="images-eunji/mguide-img2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="images-eunji/mguide-img3.jpg" alt=""></div>
         </div>
-    </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
 
     <div class="review">
         <h2>에디트립 이용 후기</h2>
@@ -192,5 +191,14 @@
     </footer>
     <script src="script/guide.js"></script>
     <script src="script/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
 </body>
 </html>
