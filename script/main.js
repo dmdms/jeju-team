@@ -63,6 +63,11 @@ function tabMenu(){
 
 }
 
+function setDraggable(draggable) {
+    // 마우스 드래그로 지도 이동 가능여부를 설정합니다
+    map.setDraggable(draggable);    
+}
+
 function FaqBox__init() {
     $('.faq-box > ul > li').click(function() {
       let $this = $(this);
@@ -83,6 +88,8 @@ function FaqBox__init() {
     $('.faq-box__answer').click(function() {
       return false;
     });
-  }
+}
   
   FaqBox__init();
+
+
