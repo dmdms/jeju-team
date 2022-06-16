@@ -110,7 +110,9 @@ $limit: 1200px;
     color: $base-font-color;
     width: 100%;
 }
-
+.mguide-img {
+    display: none;
+}
 // guide 2
 .guide-img2 {
     background: #e5e5e5;
@@ -164,7 +166,9 @@ $limit: 1200px;
     line-height: 25px;
     font-size: 16px;
 }
-
+.mg-icons {
+    display: none;
+}
 // review
 
 .review {
@@ -201,4 +205,133 @@ $limit: 1200px;
 .sns-icons a:hover {
     opacity: 50%;
     transition: all ease-in-out .3s;
+}
+
+/* media */
+@media screen and (max-width: 375px){
+    .body {
+        max-width: 375px;
+        overflow: hidden;
+    }
+    header {
+        // max-width: 375px;
+        // max-height: 50px;
+        display: none;
+    }
+    .logo img{
+        max-width: 80px;
+        max-height: 40px;
+    }
+    .member {
+        display: none;
+    }
+    .guide-top {
+        max-width: 375px;
+    }
+    .guide-top img {
+        height: 200px;
+    }
+    .top-text {
+        top: 9%;
+        margin: 0 10px;
+    }
+    .top-text h2 {
+        font-size: 22px;
+    }
+    .top-text p {
+        font-size: 15px;
+    }
+
+    .home-guide {
+        padding: 7px 0;
+    }
+    .home-guide img{
+        width: 15px;
+        padding: 11px;
+    }
+    .home-guide-text{
+        font-size: 10px;
+        padding: 0 0 0 15px;
+    }
+
+
+    // contents
+    .guide-img1, .guide-img2, .guide-img3 {
+        display: none;
+    }
+    .mguide-img  {
+        display: block;
+        font-size: 0;
+    }
+    .guide-text h2, .review h2, .gsns-wrap h2 {
+        font-size: 18px;
+    }
+    .guide-text p, .review p, .gsns-wrap p {
+        font-size: 12px;
+    }
+    .mguide-img{
+        overflow: hidden;
+    }
+    .mguide-img img {
+        width: 375px;
+    }
+    .mg-images{
+        position: relative;
+        display: flex;
+        transition: transform 0.5s;
+    }
+    .mg-icons {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        color: #fff;
+        font-size: 3rem;
+        width: 375px;
+        margin: 7.5rem 0;
+        text-align: center;
+        opacity: 50%;
+    }
+    .mg-left {
+        padding-right: 290px;
+    }
+    // review
+    .review-img img {
+        max-width: 170px;
+    }
+    .sns-icons img {
+        max-width: 60px;
+    }
+
+    // footer
+    .footer {
+        max-width: 375px;
+    }
+    .footer-wrap {
+        height: 300px;
+        max-width: 375px;
+    }
+    .footer-info {
+        padding: 20px;
+    }
+    .xnb {
+        padding-top: 1rem;
+        font-size: 11px;
+    }
+    .xnb ul {
+        column-gap: 0;
+    }
+    .xnb li {
+        width: 110px;
+        text-align: center;
+    }
+    address {
+        font-size: 10px;
+        padding: 1.5rem 1rem 0 1rem;
+    }
+    .logo-ft img {
+        padding: 2rem 0;
+    }
+    .ft-back {
+        display: none;
+    }
 }
