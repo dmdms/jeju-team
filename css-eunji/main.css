@@ -167,6 +167,10 @@ address {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
 }
 
+.map-info2, .map-info3, .map-info4, .map-info5 {
+  display: none;
+}
+
 .info-text {
   color: #fff;
   display: flex;

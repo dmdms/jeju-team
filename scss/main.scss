@@ -125,6 +125,9 @@ address {
 .map-info img, .map-info2 img, .map-info3 img, .map-info4 img, .map-info5 img{
     @include mixins.box-shadow;
 }
+.map-info2, .map-info3, .map-info4, .map-info5 {
+    display: none;
+}
 .info-text {
     color: $base-font-color;
     display: flex;
