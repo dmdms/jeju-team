@@ -203,7 +203,6 @@ address {
     width: 250px;
     height: 500px;
     padding-top: 50px;
-    padding-left: 30px;
 }
 .act-de-img2{
     width: 100%;
@@ -259,17 +258,23 @@ address {
     align-items: center;
     text-align: center;
 }
-.map-wrap {
+.act-map-wrap {
     background: url("../images-heeji/map-bg.png")  no-repeat center/cover;
     height: 700px;
     width: 100%;
     margin: 0 auto;
     align-items: center;
+    
 }
+
 .act-map-title {
     display: flex;
-    padding-left: 500px;
     padding-top: 30px;
+    padding-bottom: 30px;
+    width: 174px;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
 }
 .act-map-title h2 {
     font-weight: bolder;
@@ -278,10 +283,17 @@ address {
     padding: 10px;
     text-align: center;
     align-items: center;
+
 }
 .act-map-title img {
     width: 70px;
     height: 70px;
     align-items: center;
+}
+#map {
+    margin: 0 auto;
+    width:1200px;
+    height: 500px;
+    padding-top: 30px;
 }
 

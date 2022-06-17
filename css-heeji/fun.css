@@ -229,19 +229,18 @@ address {
   padding-top: 100px;
 }
 .slider1{
-  background: url("../images-heeji/slide1.png") no-repeat center/cover;
+  background: url("../images-heeji/slide-act1.png") no-repeat center/cover;
 }
 .slider2{
-  background: url('../images-heeji/slide2.png') no-repeat center/cover;
+  background: url('../images-heeji/slide-act2.png') no-repeat center/cover;
 }
 .slider3{
-  background: url('../images-heeji/slide3.png') no-repeat center/cover;
+  background: url('../images-heeji/slide-act3.png') no-repeat center/cover;
 }
 .slider4{
-  background: url('../images-heeji/slide4.png') no-repeat center/cover;
+  background: url('../images-heeji/slide-act4.png') no-repeat center/cover;
 }
 .act-wrap {
-  background: gold;
   width: 1200px;
   margin: 0 auto;
 }

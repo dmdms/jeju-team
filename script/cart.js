@@ -5,6 +5,9 @@ $(function(){
     }
 });
 
+function localStorage(){
+    var cart = arrayListOf("cart-img","cart-text","cart-title","info")
+}
 
 function loadFromCart(){
     var data = JSON.parse(localStorage.getItem('myCart'));
