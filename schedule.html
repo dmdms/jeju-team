@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>에디트립</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/jeong.css">
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#slider').bxSlider({
+                auto: false,
+                speed: 400,
+                pause: 2500,
+                prevText: '&#10094',
+                nextText: '&#10095',
+                pager: false,
+                autoHover: true,
+                slideMargin: 28,
+                infiniteLoop: false
+            });
+        });
+        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+</head>
+<body class="schedule-html">
+    <div id="modal">
+        <h2>MY CART</h2>
+        <div class="list-cart">
+            <div class="cart-img"><img src="imgs/cart1.png" alt="카트"></div>
+
+            <ul class="cart-text">
+                <li class="cart-title">
+                        <p>엑티비티</p>
+                </li>
+                <li class="info">
+                    <p>얼라이브카트</p>
+                    <p class="info2">제주 서귀포시 중문관광로 42</p>
+                </li>
+            </ul>
+            <div class="cancel"><a href="#" onclick="return false"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        
+        <div class="list-museum">
+            <div class="osulloc-img"><img src="imgs/cart3.png" alt="오설록"></div>
+
+            <ul class="museum-text">
+                <li class="museum-title">
+                        <p>관광지</p>
+                </li>
+                <li class="info">
+                    <p>오설록 티 뮤지엄</p>
+                    <p class="info2">제주특별자치도 서귀포시 안덕면 신화역사로 15 </p>
+                </li>
+            </ul>
+            <div class="cancel"><a href="#" onclick="return false"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        <div class="list-hotel">
+            <div class="hotel-img"><img src="imgs/cart2.png" alt="호텔"></div>
+
+            <ul class="hotel-text">
+                <li class="hotel-title">
+                        <p>숙박</p>
+                </li>
+                <li class="info">
+                    <p>오설록 티 뮤지엄</p>
+                    <p class="info2">제주특별자치도 서귀포시 안덕면 신화역사로 15 </p>
+                </li>
+            </ul>
+            <div class="cancel"><a href="#" onclick="return false"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        <div id="btn-group">
+            <button id="btn1">닫기</button>
+            <a href="map.html"><button id="btn2">경로탐색</button></a>
+        </div>
+    </div>
+    <header>
+        <h1 class="d-none">에디트립</h1>
+        <div class="header-wrap">
+            <div class="logo-wrap">
+                <div class="logo"><a href="index.html"><img src="imgs/logo2.png" alt="에디트립"></a></div>
+                <div class="logo d-none"><a href="index.html"><img src="imgs/logo2.png" alt="에디트립"></a></div>
+            </div>
+            <nav>
+                <h2 class="d-none">에디트립 메뉴</h2>
+                <ul id="gnb">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                </ul>
+            </nav>
+            <ul class="member">
+                <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+                <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
+            <div id="m-menu">
+                <ul class="burger">
+                    <li><i class="fa-solid fa-bars"></i></li>
+                    <li class="d-none"><i class="fa-solid fa-xmark"></i></li>
+                </ul>
+                <ul class="m-menu animate__animated animate__slideInRight">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                    <li>
+                        <ul class="menu-sub">
+                            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+                            <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <body class="schedule-html">
+        <div class="header-bottom">
+            <div class="header-bottom-wrap">
+                <div class="header-bottom-text">
+                    <h2>제주여행을 자유롭게 만들다.</h2>
+                    <p>친구들과 일정을 공유해보세요!</p>
+                </div>
+                <ul class="header-bottom-icon">
+                    <li><a onclick="alert('기능 준비중입니다.');"><img src="imgs/snsicon-15.png" alt="링크공유"></a></li>
+                    <li><a href=""><img src="imgs/snsicon-16.png" alt="인스타그램"></a></li>
+                    <li><a href=""><img src="imgs/snsicon-17.png" alt="페이스북"></a></li>
+                    <li><a href=""><img src="imgs/snsicon-18.png" alt="카카오톡"></a></li>
+                </ul>
+            </div>
+        </div>
+        <section>
+            <article id="trip-schedule">
+                <ul id="slider">
+                    <li>
+                        <div class="slide-wrap">
+                            <div class="day">
+                                <h3>day - 1</h3>
+                                <p>2022.06.10</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/cart2.png" alt="">
+                                <p>제주신라호텔<br><span>10:00 이동</span></p>
+                            </div>
+                            <div class="move">
+                                <p><i class="fa-solid fa-car"></i> 자동차로 이동 <span>1km</span></p>
+                                <p class="move-time">30분</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/slide1.jpg" alt="">
+                                <p>검멀레 해변<br><span>10:30 도착 - 14:00 이동</span></p>
+                            </div>
+                            <div class="move">
+                                <p><i class="fa-solid fa-signs-post"></i> 도보로 이동 <span>500m</span></p>
+                                <p class="move-time">30분</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/cart3.png" alt="">
+                                <p>제주진미식당<br><span>14:30 도착</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slide-wrap">
+                            <div class="day">
+                                <h3>day - 2</h3>
+                                <p>2022.06.10</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/cart2.png" alt="">
+                                <p>제주신라호텔<br><span>10:00 이동</span></p>
+                            </div>
+                            <div class="move">
+                                <p><i class="fa-solid fa-car"></i> 자동차로 이동 <span>1km</span></p>
+                                <p class="move-time">30분</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/slide1.jpg" alt="">
+                                <p>검멀레 해변<br><span>10:30 도착 - 14:00 이동</span></p>
+                            </div>
+                            <div class="move">
+                                <p><i class="fa-solid fa-signs-post"></i> 도보로 이동 <span>500m</span></p>
+                                <p class="move-time">30분</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/cart3.png" alt="">
+                                <p>제주진미식당<br><span>14:30 도착</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slide-wrap">
+                            <div class="day">
+                                <h3>day - 3</h3>
+                                <p>2022.06.10</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/cart2.png" alt="">
+                                <p>제주신라호텔<br><span>10:00 이동</span></p>
+                            </div>
+                            <div class="move">
+                                <p><i class="fa-solid fa-car"></i> 자동차로 이동 <span>1km</span></p>
+                                <p class="move-time">30분</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/slide1.jpg" alt="">
+                                <p>검멀레 해변<br><span>10:30 도착 - 14:00 이동</span></p>
+                            </div>
+                            <div class="move">
+                                <p><i class="fa-solid fa-signs-post"></i> 도보로 이동 <span>500m</span></p>
+                                <p class="move-time">30분</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/cart3.png" alt="">
+                                <p>제주진미식당<br><span>14:30 도착</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slide-wrap">
+                            <div class="day">
+                                <h3>day - 4</h3>
+                                <p>2022.06.10</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/cart2.png" alt="">
+                                <p>제주신라호텔<br><span>10:00 이동</span></p>
+                            </div>
+                            <div class="move">
+                                <p><i class="fa-solid fa-car"></i> 자동차로 이동 <span>1km</span></p>
+                                <p class="move-time">30분</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/slide1.jpg" alt="">
+                                <p>검멀레 해변<br><span>10:30 도착 - 14:00 이동</span></p>
+                            </div>
+                            <div class="move">
+                                <p><i class="fa-solid fa-signs-post"></i> 도보로 이동 <span>500m</span></p>
+                                <p class="move-time">30분</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/cart3.png" alt="">
+                                <p>제주진미식당<br><span>14:30 도착</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slide-wrap">
+                            <div class="day">
+                                <h3>day - 5</h3>
+                                <p>2022.06.10</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/cart2.png" alt="">
+                                <p>제주신라호텔<br><span>10:00 이동</span></p>
+                            </div>
+                            <div class="move">
+                                <p><i class="fa-solid fa-car"></i> 자동차로 이동 <span>1km</span></p>
+                                <p class="move-time">30분</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/slide1.jpg" alt="">
+                                <p>검멀레 해변<br><span>10:30 도착 - 14:00 이동</span></p>
+                            </div>
+                            <div class="move">
+                                <p><i class="fa-solid fa-signs-post"></i> 도보로 이동 <span>500m</span></p>
+                                <p class="move-time">30분</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/cart3.png" alt="">
+                                <p>제주진미식당<br><span>14:30 도착</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="slide-wrap">
+                            <div class="day">
+                                <h3>day - 6</h3>
+                                <p>2022.06.10</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/cart2.png" alt="">
+                                <p>제주신라호텔<br><span>10:00 이동</span></p>
+                            </div>
+                            <div class="move">
+                                <p><i class="fa-solid fa-car"></i> 자동차로 이동 <span>1km</span></p>
+                                <p class="move-time">30분</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/slide1.jpg" alt="">
+                                <p>검멀레 해변<br><span>10:30 도착 - 14:00 이동</span></p>
+                            </div>
+                            <div class="move">
+                                <p><i class="fa-solid fa-signs-post"></i> 도보로 이동 <span>500m</span></p>
+                                <p class="move-time">30분</p>
+                            </div>
+                            <div class="day-place">
+                                <img src="imgs/cart3.png" alt="">
+                                <p>제주진미식당<br><span>14:30 도착</span></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <div class="right">&#10095;</div> -->
+            </article>
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-info">
+                <div class="xnb">
+                    <ul>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                    </ul>
+                </div>
+                <address>
+                    상호 : 에디트립 , 대표자 : 박서준 , 사업자등록번호 : 482-88-01140<br>
+                    주소 : 서울시 서초구 바우뫼로 11인길 25 101호 , TEL : 02.2235.8955~6 , FAX : 02.2237.6185
+                    <p>copyright &copy; 2022 by에디트립 all rights reserved.</p>
+                </address>
+            </div>
+            <div class="ft-back"><img src="imgs/logo-ft.png" alt=""></div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
