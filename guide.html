@@ -22,6 +22,56 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <div>
+    <div id="modal">
+        <h2>MY CART</h2>
+        <div class="list-cart">
+            <div class="cart-img"><img src="imgs/cart1.png" alt="카트"></div>
+
+            <ul class="cart-text">
+                <li class="cart-title">
+                        <p>엑티비티</p>
+                </li>
+                <li class="info">
+                    <p>얼라이브카트</p>
+                    <p class="info2">제주 서귀포시 중문관광로 42</p>
+                </li>
+            </ul>
+            <div class="cancel"><a href="#" onclick="return false"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        
+        <div class="list-museum">
+            <div class="osulloc-img"><img src="imgs/cart3.png" alt="오설록"></div>
+
+            <ul class="museum-text">
+                <li class="museum-title">
+                        <p>관광지</p>
+                </li>
+                <li class="info">
+                    <p>오설록 티 뮤지엄</p>
+                    <p class="info2">제주특별자치도 서귀포시 안덕면 신화역사로 15 </p>
+                </li>
+            </ul>
+            <div class="cancel"><a href="#" onclick="return false"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        <div class="list-hotel">
+            <div class="hotel-img"><img src="imgs/cart2.png" alt="호텔"></div>
+
+            <ul class="hotel-text">
+                <li class="hotel-title">
+                        <p>숙박</p>
+                </li>
+                <li class="info">
+                    <p>오설록 티 뮤지엄</p>
+                    <p class="info2">제주특별자치도 서귀포시 안덕면 신화역사로 15 </p>
+                </li>
+            </ul>
+            <div class="cancel"><a href="#" onclick="return false"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        <div id="btn-group">
+            <button id="btn1">닫기</button>
+            <a href="map.html"><button id="btn2">경로탐색</button></a>
+        </div>
+    </div>
     <header>
         <div class="header-wrap">
             <div class="logo-wrap">
@@ -38,7 +88,7 @@
                 </ul>
             </nav>
             <ul class="member">
-                <li><a href="#" onclick="return false"><i class="fa-regular fa-heart"></i></a></li>
+                <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
                 <li><a href="#" onclick="return false"><i class="fa-regular fa-user"></i></a></li>
             </ul>
             <div id="m-menu">

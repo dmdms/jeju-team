@@ -15,6 +15,192 @@ body {
   color: #333;
 }
 
+#modal {
+  width: 600px;
+  height: 800px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  z-index: 1000;
+  position: fixed;
+  box-sizing: border-box;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.336);
+  overflow: hidden;
+  background: white;
+  display: none;
+}
+
+#modal h2 {
+  padding-bottom: 50px;
+  font-size: 2rem;
+}
+
+.info {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+.info2 {
+  font-size: 0.85em;
+  font-weight: lighter;
+}
+
+.list-cart {
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px;
+}
+
+.cart-text {
+  padding-left: 30px;
+  column-gap: 30px;
+  width: 50%;
+  display: flex;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+.cart-title p {
+  width: 60px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  font-size: 0.85em;
+  font-weight: normal;
+  padding: 10px 0;
+}
+
+.button {
+  height: 40px;
+  width: 300px;
+  display: flex;
+  color: #fff;
+  column-gap: 20px;
+}
+
+#modal button.route {
+  background: #003893;
+  border: 0;
+  padding: 10px 20px;
+  position: absolute;
+  border-radius: 20px;
+  align-items: center;
+  right: 40%;
+  bottom: 50px;
+}
+
+#modal button.out {
+  color: #fff;
+  background: #003893;
+  border: 0;
+  padding: 10px 20px;
+  position: absolute;
+  border-radius: 20px;
+  align-items: center;
+  right: 40%;
+  bottom: 50px;
+}
+
+.cancel {
+  padding-left: 60px;
+  padding-top: 40px;
+}
+
+.list-museum {
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  padding-top: 20px;
+}
+
+.museum-text {
+  padding-left: 30px;
+  column-gap: 30px;
+  width: 50%;
+  display: flex;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+.museum-title p {
+  width: 50px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 10px 5px;
+  font-size: 0.85em;
+  font-weight: normal;
+}
+
+.cancel {
+  padding-left: 60px;
+  padding-top: 50px;
+}
+
+.list-hotel {
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.hotel-text {
+  padding-left: 30px;
+  column-gap: 30px;
+  width: 50%;
+  display: flex;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+.hotel-title p {
+  width: 50px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 10px 5px;
+  font-size: 0.85em;
+  font-weight: normal;
+}
+
+.cancel {
+  padding-left: 60px;
+  padding-top: 50px;
+}
+
+#btn1 {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #003893;
+  margin-top: 100px;
+  margin-left: 170px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #003893;
+}
+
+#btn2 {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 0;
+  padding: 10px 20px;
+  background: #003893;
+  color: #fff;
+}
+
 #m-menu {
   display: none;
 }

@@ -2,6 +2,7 @@ $(function(){
     scrollmenu();
     tabMenu();
     mobileMenu()
+    popup();
 })
 
 function scrollmenu(){
@@ -111,5 +112,14 @@ FaqBox__init();
             $(this).addClass("d-none");
             $(this).prev().removeClass("d-none");
         }
+    });
+}
+
+function popup(){
+    $(".cart-icon").click(function(){
+        $("#modal").fadeIn("fast");
+    });
+    $("#modal button").click(function(){
+        $("#modal").fadeOut("fast");
     });
 }
