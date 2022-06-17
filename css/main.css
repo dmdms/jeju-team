@@ -12,6 +12,7 @@ ul, li {
 body {
   font: 16px/1.5 Noto-Sans KR;
   color: #333;
+  overflow-x: hidden;
 }
 
 .footer-wrap, .header-wrap, header {
@@ -67,10 +68,8 @@ header {
 }
 
 .member {
-  display: flex;
-  justify-content: space-between;
+  display: flex; column-gap: 2.5rem;
   color: #fff;
-  width: 70px;
   font-size: 1.5rem;
   line-height: 80px;
 }
@@ -233,6 +232,10 @@ header {
   font-weight: bold;
   margin-bottom: 7px;
 }
+.slide-text > i:hover {
+  color: #e63462;
+  cursor: pointer;
+}
 
 .slide-adress i {
   color: #003893;
@@ -317,6 +320,7 @@ header {
 }
 
 .info-text2 h3 {
+  color: #fff;
   font-size: 22px;
   font-weight: bold;
 }
@@ -395,11 +399,10 @@ header {
 .theme-bg {
   border: 1px solid #fff;
   background: #fff;
-  width: 1000px;
+  width: 60%;
   height: 303px;
-  position: absolute;
+  position: absolute; right: 0;
   border-top-left-radius: 50px;
-  margin-left: 700px;
 }
 
 .info-wrap {

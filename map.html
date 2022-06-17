@@ -12,8 +12,9 @@
     <title>에디트립</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/jeong.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body>
+<body class="no-scrolls">
     <div id="modal">
         <h2>MY CART</h2>
         <div class="list-cart">
@@ -85,6 +86,26 @@
                 <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
                 <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
             </ul>
+            <div id="m-menu">
+                <ul class="burger">
+                    <li><i class="fa-solid fa-bars"></i></li>
+                    <li class="d-none"><i class="fa-solid fa-xmark"></i></li>
+                </ul>
+                <ul class="m-menu animate__animated animate__slideInRight">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                    <li>
+                        <ul class="menu-sub">
+                            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+                            <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <div id="setting">
@@ -116,40 +137,263 @@
             <div><i class="fa-solid fa-train"></i> 대중교통</div>
             <div><i class="fa-solid fa-signs-post"></i> 도보</div>
         </div>
-        <div class="result-wrap">
-            <ul class="title">
-                <li><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
-                <li>DAY - 1</li>
-                <li><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
-            </ul>
-            <div class="result">
-                <table >
-                    <tr>
-                        <td></td>
-                        <td>출발</td>
-                        <td>도착</td>
-                        <td>이동 및 소요거리</td>
-                    </tr>
-                    <tr>
-                        <td>검멀레해변</td>
-                        <td>09:00</td>
-                        <td>09:30</td>
-                        <td>자동차로 이동 <span> 1km</span></td>
-                    </tr>
-                    <tr>
-                        <td>한림공원</td>
-                        <td>14:00</td>
-                        <td>14:30</td>
-                        <td>도보로 이동 <span> 500m</span></td>
-                    </tr>
-                    <tr>
-                        <td>섭지코지</td>
-                        <td>16:00</td>
-                        <td>17:30</td>
-                        <td>자동차로 이동 <span> 2km</span></td>
-                    </tr>
-                </table>
+        <div class="result-list-wrap">
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 1
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
             </div>
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 2
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 3
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 4
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 5
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 6
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 7
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="button-wrap">
+            <div class="reset"><a href="map.html">초기화</a></div>
+            <div class="save"><a href="schedule.html">저장하기</a></div>
         </div>
     </div>
     <div id="map"></div>
@@ -243,6 +487,10 @@
                                 infowindow.close();
                             };
                         }
+                        function setDraggable(draggable) {
+    // 마우스 드래그로 지도 이동 가능여부를 설정합니다
+    map.setDraggable(draggable);    
+}
                         </script>
 
                             <footer>

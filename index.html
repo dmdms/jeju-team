@@ -27,6 +27,7 @@
         });
         </script>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
 </head>
 <body>
     <div id="modal">
@@ -205,96 +206,129 @@
                     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=84855f7dbe2c82247dc168f4fcd796f2"></script>
                     <script>
                         var marker = null;
-                        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                        var mapContainer = document.getElementById('map'),
                             mapOption = { 
-                                center: new kakao.maps.LatLng(33.35899256258578, 126.52930665954167), // 지도의 중심좌표
-                                level: 11 // 지도의 확대 레벨
+                                center: new kakao.maps.LatLng(33.35899256258578, 126.52930665954167), 
+                                level: 11
                             };
         
-                            var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+                            var map = new kakao.maps.Map(mapContainer, mapOption);
         
                                 var positions = [
                                 {
                                     title: '한림공원', 
                                     latlng: new kakao.maps.LatLng(33.389223094865024, 126.24007284642093),
-                                    content: ['http://dmswl217.dothome.co.kr/images-eunji/map-side.png', '한림 공원','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']                          
+                                    content: ['한림 공원','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']                          
                                 },
                                 {
                                     title: '비자림', 
                                     latlng: new kakao.maps.LatLng(33.49039216408107, 126.81000264971824),
-                                    content: ['http://dmswl217.dothome.co.kr/images-eunji/map-side.png', '비자림','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']   
+                                    content: ['비자림','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']   
                                 },
                                 {
                                     title: '한라산 국립공원', 
                                     latlng: new kakao.maps.LatLng(33.35899256258578, 126.52930665954167),
-                                    content: ['http://dmswl217.dothome.co.kr/images-eunji/map-side.png', '한라산 국립공원','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']   
+                                    content: ['한라산 국립공원','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']   
                                 },
                                 {
                                     title: '우도',
                                     latlng: new kakao.maps.LatLng(33.50427922494985, 126.95530466524886),
-                                    content: ['http://dmswl217.dothome.co.kr/images-eunji/map-side.png', '우도','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']   
+                                    content: ['우도','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']   
                                 },
                                 {
                                     title: '섭지코지',
                                     latlng: new kakao.maps.LatLng(33.4239883908754, 126.93031458904902),
-                                    content: ['http://dmswl217.dothome.co.kr/images-eunji/map-side.png', '섭지코지','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']   
+                                    content: ['섭지코지','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']   
                                 }
                             ];
                         for (var i = 0; i < positions.length; i ++) {
                             
-                            // 마커를 생성합니다
-                            let marker = new kakao.maps.Marker({
-                                map: map, // 마커를 표시할 지도
-                                position: positions[i].latlng, // 마커를 표시할 위치
-                                title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                           
+                            let marker1 = new kakao.maps.Marker({
+                                map: map, 
+                                position: positions[0].latlng, 
+                                title : positions[0].title,
                             });
-        
-                            // 마커에 표시할 인포윈도우를 생성합니다 
+                            let marker2 = new kakao.maps.Marker({
+                                map: map, 
+                                position: positions[1].latlng,
+                                title : positions[1].title,
+                            });
+                            let marker3 = new kakao.maps.Marker({
+                                map: map,
+                                position: positions[2].latlng,
+                                title : positions[2].title,
+                            });
+                            let marker4 = new kakao.maps.Marker({
+                                map: map,
+                                position: positions[3].latlng,
+                                title : positions[3].title, 
+                            });
+                            let marker5 = new kakao.maps.Marker({
+                                map: map,
+                                position: positions[4].latlng, 
+                                title : positions[4].title,
+                            });
                             var infowindow = new kakao.maps.InfoWindow({
-                                content: positions[i].content[i] // 인포윈도우에 표시할 내용
+                                content: positions[i].content[i]
                             });
-                            // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
-                            // 이벤트 리스너로는 클로저를 만들어 등록합니다 
-                            // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-                            // kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-                            // kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-                            // 마커에 클릭이벤트를 등록합니다
-                kakao.maps.event.addListener(marker, 'click', function() {
-                    // 마커 위에 인포윈도우를 표시합니다
-                    infowindow.open(map, marker);
-                    
-                });
+                            
+                            kakao.maps.event.addListener(marker1, 'click', function() {
+                                $(".map-info").fadeIn();
+                                $(".map-info2").hide();
+                                $(".map-info3").hide();
+                                $(".map-info4").hide();
+                                $(".map-info5").hide();
+                            });
+                            kakao.maps.event.addListener(marker2, 'click', function() {
+                                $(".map-info").hide();
+                                $(".map-info2").fadeIn();
+                                $(".map-info3").hide();
+                                $(".map-info4").hide();
+                                $(".map-info5").hide();
+                            });
+                            kakao.maps.event.addListener(marker3, 'click', function() {
+                                $(".map-info").hide();
+                                $(".map-info2").hide();
+                                $(".map-info3").fadeIn();
+                                $(".map-info4").hide();
+                                $(".map-info5").hide();
+                            });
+                            kakao.maps.event.addListener(marker4, 'click', function() {
+                                $(".map-info").hide();
+                                $(".map-info2").hide();
+                                $(".map-info3").hide();
+                                $(".map-info4").fadeIn();
+                                $(".map-info5").hide();
+                            });
+                            kakao.maps.event.addListener(marker5, 'click', function() {
+                                $(".map-info").hide();
+                                $(".map-info2").hide();
+                                $(".map-info3").hide();
+                                $(".map-info4").hide();
+                                $(".map-info5").fadeIn();
+                            });
                         }
-                                        // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
-                        function makeOverListener(map, marker, infowindow) {
-                            return function() {
-                                //infowindow.open(map, marker);
-                                console.log(1111)
-        
-                            };
-                        }
-        
-                        // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
                         function makeOutListener(infowindow) {
                             return function() {
                                 infowindow.close();
                             };
                         }
                         </script>
-                    <div class="info-wrap2">
+                    <div class="minfo-wrap">
                         <div class="map-info">
                             <a href="#"><img src="imgs/map-side.jpg" alt="한림공원" ></a>
-                            <div class="info-text-wrap2">
-                                <div class="info-text2">
+                            <div class="info-text-wrap">
+                                <div class="info-text">
                                     <h3>한림 공원</h3>
-                                    <a href="detail.html"><i class="fa-solid fa-circle-plus"></i></a>
+                                    <a href="#" onclick="return false"><i class="fa-solid fa-circle-plus"></i></a>
                                 </div>
                                 <p>다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는</p>
                                 <p>제주의 인기 관광지입니다.</p>
                             </div>
                         </div>
-                        <!-- <div class="map-info2">
-                            <a href="#"><img src="images-eunji/map-side.png" alt="한림공원" ></a>
+                        <div class="map-info2">
+                            <a href="#"><img src="imgs/map-side.jpg" alt="비자림" ></a>
                             <div class="info-text-wrap">
                                 <div class="info-text">
                                     <h3>비자림</h3>
@@ -304,7 +338,7 @@
                             </div>
                         </div>
                         <div class="map-info3">
-                            <a href="#"><img src="images-eunji/map-side.png" alt="한림공원" ></a>
+                            <a href="#"><img src="imgs/map-side.jpg" alt="한라산 국립공원" ></a>
                             <div class="info-text-wrap">
                                 <div class="info-text">
                                     <h3>한라산 국립공원</h3>
@@ -314,7 +348,7 @@
                             </div>
                         </div>
                         <div class="map-info4">
-                            <a href="#"><img src="images-eunji/map-side.png" alt="한림공원" ></a>
+                            <a href="#"><img src="imgs/map-side.jpg" alt="우도" ></a>
                             <div class="info-text-wrap">
                                 <div class="info-text">
                                     <h3>우도</h3>
@@ -324,7 +358,7 @@
                             </div>
                         </div>
                         <div class="map-info5">
-                            <a href="#"><img src="images-eunji/map-side.png" alt="한림공원" ></a>
+                            <a href="#"><img src="imgs/map-side.jpg" alt="섭지코지" ></a>
                             <div class="info-text-wrap">
                                 <div class="info-text">
                                     <h3>섭지코지</h3>
@@ -335,6 +369,7 @@
                         </div> -->
                     </div>
                 </div>
+            </div>
             </div>
         </article>
         <article id="best-trip">
@@ -408,16 +443,16 @@
     </section>
 
     <div class="topper">
-        <i class="fa-regular fa-circle-up"></i>
+        <a href=""><i class="fa-regular fa-circle-up"></i></a>
     </div>
     <footer>
         <div class="footer-wrap">
             <div class="footer-info">
                 <div class="xnb">
                     <ul>
-                        <li><a href="#">개인정보취급방침</a></li>
-                        <li><a href="#">이용약관</a></li>
-                        <li><a href="#">이메일무단수집거부</a></li>
+                        <li><a href="#" onclick="return false">개인정보취급방침</a></li>
+                        <li><a href="#" onclick="return false">이용약관</a></li>
+                        <li><a href="#" onclick="return false">이메일무단수집거부</a></li>
                     </ul>
                 </div>
                 <address>

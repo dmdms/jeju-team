@@ -1,10 +1,11 @@
-let i=0;
 $(function(){
     scrollmenu();
     heart();
     popup();
     tabMenu();
     result();
+    resultDelete();
+    mobileMenu();
 })
 function popup(){
     $(".cart-icon").click(function(){
@@ -30,10 +31,10 @@ function scrollmenu(){
     })
 }
 function heart(){
-    $(".heart").click(function(){
+    $(".slide-text > i").click(function(){
         $(this).removeClass("fa-reguler");
         $(this).addClass("fa-solid");
-        $(this).css('color','#e63462')
+        $(this).css('color','#e63462');
     })
 }
 function tabMenu(){
@@ -79,13 +80,41 @@ function tabMenu(){
     })
 }
 function result(){
-    $(".title li:first").click(function(){
+    $(".title > .result-down").click(function(){
         if(! $(this).hasClass("rotate")){
             $(this).addClass("rotate");
-            $(".result").slideDown("fast");
+            $(this).next().children(".result").slideDown("fast");
+            $(this).parent().css("background","#003893");
+            $(this).parent().css("color","white");
+            $(this).parent().css("marginBottom","150px");
         }else{
             $(this).removeClass("rotate");
-            $(".result").slideUp("fast");
+            $(this).next().children(".result").slideUp("fast");
+            $(this).parent().css("background","white");
+            $(this).parent().css("color","inherit");
+            $(this).parent().css("marginBottom","0px");
         }
     })
+}
+function resultDelete(){
+    $(".result-delete").click(function(){
+        $(this).prev().children(".result").css("display","none");
+        $(this).parent().css("marginBottom","-150px")
+    })
+}
+function mobileMenu(){
+    $(".burger > li:first").click(function(){
+        if(! $(this).hasClass("d-none")){
+            $(".m-menu").show();
+            $(this).addClass("d-none");
+            $(this).next().removeClass("d-none");
+        }
+    });
+    $(".burger > li:last").click(function(){
+        if(! $(this).hasClass("d-none")){
+            $(".m-menu").hide();
+            $(this).addClass("d-none");
+            $(this).prev().removeClass("d-none");
+        }
+    });
 }
