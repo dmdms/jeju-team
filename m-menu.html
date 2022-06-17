@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .header-wrap{
+        width: 375px;
+        height: 50px;
+    }
+    #gnb {
+        display: none;
+    }
+    .fa-bars {
+        color:#fff;
+    }
+    .burger {font-size: 1.5rem; position: relative; padding-right: 20px; transition: all ease-in-out .3s; z-index: 10;}
+    .burger li {
+        position: absolute;
+    }
+    #m-menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15%;
+    }
+    .m-menu {
+        position: fixed;
+        background: rgba(255, 255, 255, 0.918);
+        width: 70%; height: 100%;
+        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.158);
+        right: 0; top: 0;
+        padding: 30px 30px;
+        box-sizing: border-box;
+        display: none;
+    }
+    .m-menu li {
+        font-size: 1.4rem;
+        line-height: 3rem;
+        font-weight: bold;
+        color: #333;
+    }
+    .menu-sub {
+        display: flex;
+        column-gap: 20px;
+        border-top: 1px solid #999;
+        margin-top: 30px;
+        padding-top: 10px;
+    }
+    .logo img {
+        max-width: 80px;
+        max-height: 45px;
+        margin: 0 0 0 .8rem;
+    }
+    .member {
+        display: none;
+    }
+  </style>
+</head>
+<body>
+    <div id="m-menu">
+        <ul class="burger">
+            <li><i class="fa-solid fa-bars"></i></li>
+            <li class="d-none"><i class="fa-solid fa-xmark"></i></li>
+        </ul>
+        <ul class="m-menu animate__animated animate__slideInRight">
+            <li><a href="tour.html">관광</a></li>
+            <li><a href="food.html">음식</a></li>
+            <li><a href="stay.html">숙박</a></li>
+            <li><a href="fun.html">체험</a></li>
+            <li><a href="cs.html">고객센터</a></li>
+            <li>
+                <ul class="menu-sub">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+                    <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+<script>
+    function scrollmenu(){
+    $(window).scroll(function(){
+        if($(window).scrollTop()){
+            $('header').addClass('active');
+            $("#gnb").css('color','#333333');
+            $(".member").css('color','#333333');
+            $(".logo").removeClass("d-none");
+            $(".fa-bars").css('color','#333333');
+            $(".m-menu").css('top','6%');
+        } else{
+            $('header').removeClass('active');
+            $("#gnb").css('color','white');
+            $(".member").css('color','white');
+            $(".logo:last").addClass("d-none");
+            $(".fa-bars").css('color','white');
+            $(".m-menu").css('top','0');
+        }
+    })
+}
+</script>
+</body>
+</html>
+
+
+
+

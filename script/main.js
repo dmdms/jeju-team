@@ -1,6 +1,7 @@
 $(function(){
     scrollmenu();
     tabMenu();
+    mobileMenu()
 })
 
 function scrollmenu(){
@@ -10,11 +11,15 @@ function scrollmenu(){
             $("#gnb").css('color','#333333');
             $(".member").css('color','#333333');
             $(".logo").removeClass("d-none");
+            $(".fa-bars").css('color','#333333');
+            $(".m-menu").css('top','6%');
         } else{
             $('header').removeClass('active');
             $("#gnb").css('color','white');
             $(".member").css('color','white');
             $(".logo:last").addClass("d-none");
+            $(".fa-bars").css('color','white');
+            $(".m-menu").css('top','0');
         }
     })
 }
@@ -89,7 +94,22 @@ function FaqBox__init() {
       return false;
     });
 }
-  
-  FaqBox__init();
+FaqBox__init();
 
 
+  function mobileMenu(){
+    $(".burger > li:first").click(function(){
+        if(! $(this).hasClass("d-none")){
+            $(".m-menu").show();
+            $(this).addClass("d-none");
+            $(this).next().removeClass("d-none");
+        }
+    });
+    $(".burger > li:last").click(function(){
+        if(! $(this).hasClass("d-none")){
+            $(".m-menu").hide();
+            $(this).addClass("d-none");
+            $(this).prev().removeClass("d-none");
+        }
+    });
+}
