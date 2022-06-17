@@ -31,3 +31,6 @@
     transition-duration: $speed;
     transition-timing-function: $count;
 }
+@mixin text-shadow ($offset-x: 2px, $offset-y: 2px, $blur-radius: 4px, $color: #444){
+    text-shadow: $offset-x $offset-y $blur-radius $color;
+}

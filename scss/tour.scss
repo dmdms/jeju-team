@@ -1,0 +1,284 @@
+@use "reset";
+@use "mixins";
+
+$base-color-dark : #333;
+$base-color-gray : #ededed;
+$point-color-blue : #003893;
+$point-color-pink : #e63462;
+$base-font-color : #fff;
+$limit: 1200px;
+
+%margin-auto {margin: 0 auto;};
+
+// ===================================================================
+
+.d-none {display: none;}
+
+header {
+    position: fixed;
+    width: 100%;
+    @extend %margin-auto;
+    z-index: 100;
+}
+.header-wrap {
+    width: $limit;
+    @extend %margin-auto;
+    @include mixins.flex($dir:space-between);
+    height: 80px;
+}
+.logo-wrap {position: relative; width: 100px;}
+.logo {position: absolute;}
+.logo img {height: 80px;}
+#gnb {
+    color: $base-font-color;
+    width: 500px;
+    @include mixins.flex($dir:space-between);
+    line-height: 77px;
+    font-size: 20px; font-weight: bold;
+}
+#gnb > li:hover {
+    border-bottom: 5px solid $point-color-pink;
+}
+.member {
+    @include mixins.flex($dir:space-between);
+    color: $base-font-color;
+    width: 70px;
+    font-size: 1.5rem;
+    line-height: 80px;
+}
+.active {
+    background-color: $base-font-color;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.253);
+    transition: all .3s ease-in-out;
+}
+.topper i {
+    color: $base-font-color;
+    position: fixed; right: 0; bottom: 0;
+    font-size: 2.5rem;
+    @include mixins.margin($x:20px, $y:30px);
+    background : $point-color-pink;
+    @include mixins.corner-all($radius: 100px);
+    width: 50px; height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+footer {
+    width: 100%; background: $base-color-dark; 
+    color: $base-color-gray
+}
+.footer-wrap {
+    width: $limit;
+    @extend %margin-auto;
+    @include mixins.flex($dir:space-between);
+    padding: 30px 0;
+}
+.xnb ul {
+    display: flex; 
+    column-gap: 50px; 
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+address {
+    font-size: 0.8em; line-height: 25px; 
+    text-transform: uppercase;
+}
+.logo-ft img {width: 120px; opacity: 50%;}
+.ft-back img {width: 170px; opacity: 50%;}
+
+// tour.html
+.tour-top img {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.tour-text-wrap {
+   width: 1200px;
+   margin: 0 auto;
+  } 
+  .tour-text { 
+    position: absolute;
+    color: $base-font-color;
+    z-index: 10;
+    top: 20%;
+    font-weight: bold;
+    @include mixins.text-shadow;
+    border-left: 9px solid #fff;
+}
+  .tour-text h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    padding: 0 0 5px 13px;
+  }
+  
+  .tour-text p {
+    font-size: 18px;
+    padding: 0 0 5px 15px;
+  }
+  .home-tour {
+    display: flex;
+    width: 100%;
+    height: 20px;
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+    align-items: center;
+}
+.home-icon {
+    width: 20px;
+     padding: 11px 2rem 11px 5rem;
+     border-right: 1px solid #333;
+ }
+
+.home-tour-text {
+    display: flex;
+    padding-left: 2rem;
+    column-gap: .7rem;
+    font-size: 14px;
+}
+.best-title {
+    text-align: center;
+    padding-top: 100px;
+}
+.best-title h2 {
+    font-weight: bolder;
+    font-size: 30px;
+    color: #333333;
+}
+.best-title p {
+    font-weight:bolder ;
+    font-size: 20px;
+    color: $point-color-pink;
+    padding-bottom: 40px;
+}
+.slider{
+    height: 400px;
+    width: 100%;
+}
+.slider > div {
+    height: 400px;
+    width: 100%;
+}
+.slider > div:nth-child(1){
+    background: url("../images-heeji/slide-act1.png") no-repeat center/cover;
+}
+.slider > div:nth-child(2){
+    background: url('../images-heeji/slide-act2.png') no-repeat center/cover;
+}
+.slider > div:nth-child(3){
+    background: url('../images-heeji/slide-act3.png') no-repeat center/cover;
+}
+.slider > div:nth-child(4){
+    background: url('../images-heeji/slide-act4.png') no-repeat center/cover;
+}
+
+.bx-wrapper {
+    border: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+/* 좌우 이전 다음 버튼 */
+.bx-prev { width: 40px; height: 40px; position: absolute; top: 170px; left: 10px; z-index: 2; cursor: pointer; background: url('이미지경로') no-repeat; font-size: 0; line-height: 0; }
+.bx-next { width: 40px; height: 40px; position: absolute; top: 170px; right: 10px; z-index: 2; cursor: pointer; background: url('이미지경로') no-repeat; font-size: 0; line-height: 0; }
+
+/* 하단 페이지 버튼 */
+.bx-pager { position: absolute; left: 50%; bottom: 30px; z-index: 2; }
+.bx-pager.bx-default-pager a { display: block; width: 8px; height: 8px; margin: 0 5px; background: url('../images-heeji/slide1.png') no-repeat; }
+.bx-pager.bx-default-pager a:hover, .bx-pager.bx-default-pager a.active { background: url('../images-heeji/slide1.png') no-repeat; }
+.bx-pager-item, .bx-controls-auto .bx-controls-auto-item { float: left; }
+.bx-pager-item { font-size: 0; line-height: 0; }
+
+// DESTINATIONS TAB
+.tab-title {
+    text-align: center;
+    padding-top: 100px;
+}
+.tab-title h2 {
+    font-weight: bolder;
+    font-size: 30px;
+    color: #333333;
+}
+.tab-title p {
+    font-weight:bolder ;
+    font-size: 20px;
+    color: #333333;
+    padding-bottom: 40px;
+}
+.spot-list2, .spot-list3, .spot-list4 {
+    display: none;
+}
+.spot-tab-wrap {
+    display: flex;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.spot-tab-wrap > div {
+    overflow: hidden;
+    margin: 0 auto;
+}
+.spot {
+    align-items: center;
+}
+.spot-title {
+    display: flex;
+    column-gap: 30px;
+    margin: 0 auto;
+    font-size: 20px;
+    padding-bottom: 50px;
+    padding-left: 280px;
+}
+.spot-title p:hover {
+    color: #003893;
+    border: 3px solid $point-color-blue ;
+    background: white;
+}
+.spot-title p {
+    height: 40px;
+    display: flex;
+    color: #333333;
+    border: 3px solid lightgrey;
+    border-radius: 50px;
+    align-items: center;
+    padding: 2px 30px;
+}
+.spot-title > a {
+    display: inline-block;
+    height: 60px;
+    margin: 10px;
+    line-height: 50px;
+} 
+.heart {
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+.dong {
+    display: flex;
+    column-gap: 10px;
+}
+.dong2 {
+    display: flex;
+    column-gap: 10px;
+    padding-top: 60px;
+    padding-bottom: 150px;
+}
+.dong p {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.tag {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    padding-top: 5px;
+}
+.tag p {
+    font-size: .850em;
+    border: 3px solid $base-color-gray;
+    background: $base-color-gray;
+    border-radius: 50px;
+    padding: 3px 7px;
+}
+
+
+      
