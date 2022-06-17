@@ -1,0 +1,227 @@
+@use "base";
+@use "mixins";
+
+$base-color-dark : #333;
+$base-color-gray : #ededed;
+$point-color-blue : #003893;
+$point-color-pink : #e63462;
+$base-font-color : #fff;
+$base-font-size : 16px;
+$limit: 1200px;
+%margin-auto {margin: 0 auto;};
+
+// ===================================================================
+
+.d-none {display: none;}
+
+header {
+    position: fixed;
+    width: 100%;
+    @extend %margin-auto;
+    z-index: 100;
+}
+.header-wrap {
+    width: $limit;
+    @extend %margin-auto;
+    @include mixins.flex($dir:space-between);
+    height: 80px;
+}
+.logo-wrap {position: relative; width: 100px;}
+.logo {position: absolute;}
+.logo img {height: 80px;}
+#gnb {
+    color: $base-font-color;
+    width: 500px;
+    @include mixins.flex($dir:space-between);
+    line-height: 77px;
+    font-size: 20px; font-weight: bold;
+}
+#gnb > li:hover {
+    border-bottom: 5px solid $point-color-pink;
+}
+.member {
+    @include mixins.flex($dir:space-between);
+    color: $base-font-color;
+    width: 70px;
+    font-size: 1.5rem;
+    line-height: 80px;
+}
+.active {
+    background-color: $base-font-color;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.253);
+    transition: all .3s ease-in-out;
+}
+.topper i {
+    color: $base-font-color;
+    position: fixed; right: 0; bottom: 0;
+    font-size: 2.5rem;
+    @include mixins.margin($x:20px, $y:30px);
+    background : $point-color-pink;
+    @include mixins.corner-all($radius: 100px);
+    width: 50px; height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+footer {
+    width: 100%; background: $base-color-dark; 
+    color: $base-color-gray
+}
+.footer-wrap {
+    width: $limit;
+    @extend %margin-auto;
+    @include mixins.flex($dir:space-between);
+    padding: 30px 0;
+}
+.xnb ul {
+    display: flex; 
+    column-gap: 50px; 
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+address {
+    font-size: 0.8em; line-height: 25px; 
+    text-transform: uppercase;
+}
+.logo-ft img {width: 120px; opacity: 50%;}
+.ft-back img {width: 170px; opacity: 50%;}
+
+
+// ========== map ==========
+
+%map-bg {
+    width: 100%;
+    height: 650px;
+    background: url(../images-eunji/main-mapbg.jpg) no-repeat center/cover;
+}
+.main-map {
+    @extend %map-bg;
+}
+.map-text {
+    @include mixins.flex;
+    color: $base-font-color;
+    column-gap: 10px;
+    padding: 5rem 0 4rem 0;
+    font-size: 18px;
+}
+.map-text h2 {
+    font-weight: bold;
+}
+.map-wrap {
+    @include mixins.flex;
+}
+#map {
+    width: 430px;
+    height: 400px;
+    @include mixins.box-shadow;
+}
+.info-wrap {
+    height: 400px;
+    overflow: hidden;
+}
+// .map-info, .map-info2, .map-info3, .map-info4, .map-info5 {
+//     height: 400px;
+// }
+.map-info img, .map-info2 img, .map-info3 img, .map-info4 img, .map-info5 img{
+    @include mixins.box-shadow;
+}
+.map-info2, .map-info3, .map-info4, .map-info5 {
+    display: none;
+}
+.info-text {
+    color: $base-font-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+.info-text-wrap p {
+    padding: 1px 10px;
+    font-size: 13px;
+}
+.info-text h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
+.info-text-wrap {
+    color: $base-font-color;
+    max-width: 440px;
+    padding: 0 5px;
+}
+.fa-solid {
+    width: 24px;
+    
+}
+
+
+// ========== main-theme ==========
+.theme-wrap {
+    background: #dde0e6;
+}
+.theme-text {
+    @include mixins.flex;
+}
+.theme-text {
+    font-size:18px;
+    column-gap: 10px;
+}
+.theme-text h2 {
+    font-weight: bold;
+}
+.theme-img img {
+    width: 500px;
+}
+.cont-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+.theme-img2, .theme-img3, .theme-img4 {
+    display: none;
+}
+.theme-info2 {
+    display: none;
+}
+.theme-info3 {
+    display: none;
+}
+.theme-info4 {
+    display: none;
+}
+.theme-bg {
+    border: 1px solid #fff;
+    background: #fff;
+    width: 740px;
+    height: 303px;
+    position: absolute;
+    border-top-left-radius: 50px;
+}
+.info-wrap {
+    z-index: 100;
+    padding-right: 10rem;
+}
+
+.info-wrap h3 {
+    padding: 3rem 0 0 0;
+    font-size: 13px;
+}
+.info-wrap h2 {
+    padding: 1rem 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.info-wrap p {
+    font-size: 14px;
+    padding: .3rem 0;
+}
+.text-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.theme-heart {
+    padding-top: 3rem;
+    font-size: 1.2rem;
+}
+.theme-plus {
+    padding-top: 2rem;
+    font-size: 3rem;
+    color: #ccc;
+}

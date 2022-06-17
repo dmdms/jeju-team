@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>에디트립</title>
+    <link rel="stylesheet" href="css-eunji/main.css">
+    <link rel="stylesheet" href="css-eunji/guide.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<div>
+    <header>
+        <div class="header-wrap">
+            <div class="logo-wrap">
+                <div class="logo"><a href="index.html"><img src="images-eunji/logo.png" alt="에디트립"></a></div>
+                <div class="logo d-none"><a href="index.html"><img src="images-eunji/logo2.png" alt="에디트립"></a></div>
+            </div>
+            <nav>
+                <ul id="gnb">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                </ul>
+            </nav>
+            <ul class="member">
+                <li><a href="#" onclick="return false"><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href="#" onclick="return false"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
+            <div id="m-menu">
+                <ul class="burger">
+                    <li><i class="fa-solid fa-bars"></i></li>
+                    <li class="d-none"><i class="fa-solid fa-xmark"></i></li>
+                </ul>
+                <ul class="m-menu animate__animated animate__slideInRight">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                    <li>
+                        <ul class="menu-sub">
+                            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+                            <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+    <div class="guide-top">
+        <div class="top-text-wrap">
+            <div class="top-text">
+                <h2>guide</h2>
+                <p>소개</p>
+            </div>
+        </div>
+        <img src="images-eunji/guide-main.jpg" alt="에디트립 가이드">
+    </div>
+    <div class="home-guide">
+        <a href="index.html"><img src="images-eunji/ant-design_home-filled.png" alt="홈"></a>
+        <div class="home-guide-text">
+            <p><a href="index.html">홈</a></p>
+            <p>&gt;</p>
+            <p><a href="cs.html">고객센터</a></p>
+            <p>&gt;</p>
+            <p><a href="guide.html">가이드</a></p>
+        </div>
+    </div>
+    <div class="guide-text">
+        <h2>에디트립 가이드</h2>
+        <p>에디트립 이용 방법을 알려드립니다.</p>
+    </div>
+    <div class="guide-img1">
+        <div class="gimg1-text">
+                <div data-aos="fade-up" data-aos-duration="1500" class="guide-animate">
+                    <h3>제주 여행 고민하지 마세요!</h3>
+                    <hr>
+                    <p>에디트립과 함께라면 제주도 여행 계획 걱정은 끝!</p>
+                    <p>여행지 검색부터 스케줄표 생성까지 에디트립에서 해결하세요.</p>
+                </div>
+            </div>
+            <img src="images-eunji/guide-cont1.jpg" alt="가이드 1">
+        </div>
+        <div class="guide-img2">
+            <div class="guide2-wrap">
+                <div class="gimg2-text">
+                    <div data-aos="fade-up" data-aos-duration="1500" class="guide-animate">
+                        <h3>에디트립으로 간단하게</h3>
+                        <h4>여행지를 담고, 경로를 탐색하고, 스케줄표를 생성하세요. <br> 제주 여행이 쉬워집니다.</h4>
+                        <div class="guide2-img"><img src="images-eunji/guide-cont2.png" alt="가이드 2"></div>
+                        <p>원하는 여행지 검색부터 추천 여행지, 인기 여행지, 테마별 여행지를 만나보실 수 있습니다. <br>
+                            클릭 한 번으로 이 모든 여행지의 경로를 한 눈에 알아보고, 스케줄표에 추가하세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="guide-img3">
+        <div class="gtext-wrap">
+            <div class="gimg3-text1">
+                <div data-aos="fade-up" data-aos-duration="2000" class="guide-animate">
+                    <h3>여행지 담기</h3>
+                    마음에 드는 여행지를 검색하거나 리스트 페이지에서 골라보세요. <br>
+                    인기 여행지와 추천 여행지는 물론 함께 여행하는 사람에 맞춘 여행지도 살펴보실 수 있습니다. <br>
+                    <br>
+                    만약 그 여행지가 마음에 들었다면 하트 모양의 찜하기 버튼을 눌러 
+                    장바구니에 담아보세요.<br> 담긴 리스트는 오른쪽 상단 버튼을 눌러 확인하실 수 있습니다.<br>
+                    장바구니에서 여행지를 누르면 자세한 정보를 확인하실 수도 있습니다.
+                    <br><br>
+                    가고 싶은 곳, 고민 되는 곳, 궁금한 곳 모두 담아보세요.
+                </div>
+            </div>
+                <div class="g-line"></div>
+                <div class="gimg3-text2">
+                    <div data-aos="fade-up" data-aos-duration="2000" class="guide-animate">
+                        <h3>경로 탐색</h3>
+                        <p>
+                            여행지를 내 장바구니에 담았다면, 담긴 여행지를 어떻게 가는지 알아볼 차례입니다. <br>
+                            출발지와 도착지를 입력하면 에디트립이 경로를 탐색해줍니다. <br><br>
+                            가는 길은 물론 얼마나 걸리는지, 교통 수단에 따른 경로 등
+                            혼자 알아보기 번거로웠던 정보들을 편리하게 제공합니다.<br>
+                            <br>
+                            직접 여기저기 돌아다니며 알아봐야 했던 불편함은 줄이고,<br>
+                            한 번에 해결할 수 있는 에디트립의 경로 탐색 서비스를 이용해보세요.
+                        </p>
+                    </div>
+                </div>
+                <div class="g-line"></div>
+                <div class="gimg3-text3">
+                    <div data-aos="fade-up" data-aos-duration="2000" class="guide-animate">
+                        <h3>스케줄표 생성</h3>
+                        <p>
+                            여행지를 담아 경로 탐색까지 모두 마쳤다면 이제 에디트립의 스케줄표를 만나실 수 있습니다. <br>
+                            <br>
+                            경로를 탐색한 뒤에 스케줄표 생성을 선택하면, <br>
+                            에디트립이 여행지들을 모두 종합해 효율적인 스케줄표를 제공합니다. <br> 
+                            바쁜 일상 속에서 여행 계획까지 모두 짜기란 힘든 일이지만,
+                            에디트립의 스케줄표와 함께라면 아주 간단하게 스케줄표를 생성하실 수 있습니다.<br> 
+                            이렇게 완성된 스케줄표를 동행인 또는 친구들과 함께 공유하세요.<br>
+                            <br>
+                            에디트립과 함께 즐거운 제주 여행을 즐겨보세요. <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <img src="images-eunji/guide-cont3.jpg" alt="가이드 3">
+    </div>
+    
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images-eunji/mguide-img1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="images-eunji/mguide-img2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="images-eunji/mguide-img3.jpg" alt=""></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+    <div class="review">
+        <h2>에디트립 이용 후기</h2>
+        <p>에디트립 이용자의 생생한 실제 후기를 살펴보세요.</p>
+        <div data-aos="fade-up" data-aos-duration="1500" class="guide-animate">
+            <div class="review-img">
+                <div class="review-wrap1">
+                    <img src="images-eunji/review1.png" alt="리뷰1">
+                    <img src="images-eunji/review2.png" alt="리뷰2">
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1500" class="guide-animate">
+                <div class="review-wrap2">
+                    <img src="images-eunji/review4.png" alt="리뷰3">
+                    <img src="images-eunji/review3.png" alt="리뷰4">
+                </div>
+            </div>
+        </div>
+        <div class="m-review-img">
+            <div class="m-review-wrap">
+                <img src="images-eunji/review1.png" alt="리뷰1">
+                <img src="images-eunji/review2.png" alt="리뷰2">
+                <img src="images-eunji/review4.png" alt="리뷰3">
+                <img src="images-eunji/review3.png" alt="리뷰4">
+            </div>
+        </div>
+    </div>
+    <div class="guide-sns">
+        <div class="gsns-wrap">
+            <h2>에디트립 SNS</h2>
+            <p>간편하게 문의하고 새소식 알림도 받아보세요.</p>
+        </div>
+        <div class="sns-icons">
+            <a href="https://www.instagram.com/"><img src="images-eunji/instagram.png" alt="인스타"></a>
+            <a href="http://www.kakao.com"><img src="images-eunji/kakao-talk.png" alt="카카오톡"></a>
+            <a href="https://www.facebook.com/"><img src="images-eunji/facebook.png" alt="페이스북"></a>
+        </div>
+    </div>
+
+    <div class="topper">
+        <i class="fa-regular fa-circle-up"></i>
+    </div>
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-info">
+                <div class="xnb">
+                    <ul>
+                        <li><a href="#" onclick="return false">개인정보취급방침</a></li>
+                        <li><a href="#" onclick="return false">이용약관</a></li>
+                        <li><a href="#" onclick="return false">이메일무단수집거부</a></li>
+                    </ul>
+                </div>
+                <address>
+                    상호 : 에디트립 , 대표자 : 박서준 , 사업자등록번호 : 482-88-01140<br>
+                    주소 : 서울시 서초구 바우뫼로 11인길 25 101호 , TEL : 02.2235.8955~6 , FAX : 02.2237.6185
+                    <p>copyright &copy; 2022 by에디트립 all rights reserved.</p>
+                    <div class="logo-ft"><img src="images-eunji/logo.png" alt=""></div>
+                </address>
+            </div>
+            <div class="ft-back" ><img src="images-eunji/logo-ft.png" alt=""></div>
+        </div>
+    </footer>
+    <script src="script/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
+    <script>AOS.init();</script>
+</body>
+</html>
