@@ -27,6 +27,7 @@
         });
         </script>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
 </head>
 <body>
@@ -101,10 +102,30 @@
                 <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
                 <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
             </ul>
+            <div id="m-menu">
+                <ul class="burger">
+                    <li><i class="fa-solid fa-bars"></i></li>
+                    <li class="d-none"><i class="fa-solid fa-xmark"></i></li>
+                </ul>
+                <ul class="m-menu animate__animated animate__slideInRight">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                    <li>
+                        <ul class="menu-sub">
+                            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+                            <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <div class="hero">
-        <div class="hero-text">
+        <div class="hero-text animate__animated animate__fadeIn">
             <p>Build your own trip plan!</p>
             <h3>제주여행을 자유롭게 만들다.</h3>
             <div class="custom-search">
@@ -114,7 +135,7 @@
                 </form>
             </div>
         </div>
-        <div class="hero-icon">
+        <div class="hero-icon animate__animated animate__fadeIn">
             <ul class="icon-wrap">
                 <li><a href="tour.html"><img src="imgs/icon-06.png" alt="관광"></a></li>
                 <li class="icon-top"><a href="tour.html"><img src="imgs/icon-hover-06.png" alt="관광"></a></li>
@@ -140,12 +161,12 @@
             <ul id="slider">
                 <li>
                     <div class="slide-wrap"><a href="detail.html">
-                        <img src="imgs/slide1.jpg" alt="검멀레해변">
+                        <a href="detail.html"><img src="imgs/slide1.jpg" alt="검멀레해변"></a>
                         <div class="slide-text">
                             <h3>우도 검멀레해변</h3>
                             <p class="slide-adress"><i class="fa-solid fa-location-dot"></i> 제주시 우도면 우도해안길</p>
                             <p class="slide-tag"><span>#해변</span><span>#동굴</span><span>#절벽</span></p>
-                            <i class="fa-regular fa-heart heart"></i>
+                            <i class="fa-regular fa-heart theme-heart"></i>
                         </div>
                     </a></div>
                 </li>
@@ -162,7 +183,7 @@
                 </li>
                 <li>
                     <div class="slide-wrap">
-                        <img src="imgs/slide3.jpg" alt="검멀레해변">
+                        <a href="detail.html"><img src="imgs/slide3.jpg" alt="검멀레해변"></a>
                         <div class="slide-text">
                             <h3>아르떼뮤지엄</h3>
                             <p class="slide-adress"><i class="fa-solid fa-location-dot"></i> 애월읍 어림비로 478</p>
@@ -173,7 +194,7 @@
                 </li>
                 <li>
                     <div class="slide-wrap">
-                        <img src="imgs/slide4.png" alt="검멀레해변">
+                        <a href="detail.html"><img src="imgs/slide4.png" alt="검멀레해변"></a>
                         <div class="slide-text">
                             <h3>만장굴</h3>
                             <p class="slide-adress"><i class="fa-solid fa-location-dot"></i> 제주시 구좌읍 만장굴길 182</p>
@@ -184,7 +205,7 @@
                 </li>
                 <li>
                     <div class="slide-wrap">
-                        <img src="imgs/slide5.png" alt="검멀레해변">
+                        <a href="detail.html"><img src="imgs/slide5.png" alt="검멀레해변"></a>
                         <div class="slide-text">
                             <h3>금악오름</h3>
                             <p class="slide-adress"><i class="fa-solid fa-location-dot"></i> 제주시 한림읍 금악리 산 1-1</p>
@@ -320,53 +341,52 @@
                             <a href="#"><img src="imgs/map-side.jpg" alt="한림공원" ></a>
                             <div class="info-text-wrap">
                                 <div class="info-text">
-                                    <h3>한림 공원</h3>
-                                    <a href="#" onclick="return false"><i class="fa-solid fa-circle-plus"></i></a>
+                                    <h3><a href="detail.html">한림 공원</a></h3>
+                                    <a href="detail.html" onclick="return false"><i class="fa-solid fa-circle-plus"></i></a>
                                 </div>
-                                <p>다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는</p>
-                                <p>제주의 인기 관광지입니다.</p>
+                                <p>다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, <br>민속촌이 있는 제주의 인기 관광지입니다.</p>
                             </div>
                         </div>
                         <div class="map-info2">
-                            <a href="#"><img src="imgs/map-side.jpg" alt="비자림" ></a>
+                            <a href="detail.html"><img src="imgs/map-side2.jpg" alt="비자림" ></a>
                             <div class="info-text-wrap">
                                 <div class="info-text">
-                                    <h3>비자림</h3>
-                                    <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                                    <h3><a href="detail.html">비자림</a></h3>
+                                    <a href="detail.html"><i class="fa-solid fa-circle-plus"></i></a>
                                 </div>
-                                <p>다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.</p>
+                                <p>다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, <br>민속촌이 있는 제주의 인기 관광지입니다.</p>
                             </div>
                         </div>
                         <div class="map-info3">
-                            <a href="#"><img src="imgs/map-side.jpg" alt="한라산 국립공원" ></a>
+                            <a href="detail.html"><img src="imgs/map-side3.jpg" alt="한라산 국립공원" ></a>
                             <div class="info-text-wrap">
                                 <div class="info-text">
-                                    <h3>한라산 국립공원</h3>
-                                    <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                                    <h3><a href="detail.html">한라산 국립공원</a></h3>
+                                    <a href="detail.html"><i class="fa-solid fa-circle-plus"></i></a>
                                 </div>
-                                <p>다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.</p>
+                                <p>다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, <br>민속촌이 있는 제주의 인기 관광지입니다.</p>
                             </div>
                         </div>
                         <div class="map-info4">
-                            <a href="#"><img src="imgs/map-side.jpg" alt="우도" ></a>
+                            <a href="detail.html"><img src="imgs/map-side4.jpg" alt="우도" ></a>
                             <div class="info-text-wrap">
                                 <div class="info-text">
-                                    <h3>우도</h3>
-                                    <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                                    <h3><a href="detail.html">우도</a></h3>
+                                    <a href="detail.html"><i class="fa-solid fa-circle-plus"></i></a>
                                 </div>
-                                <p>다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.</p>
+                                <p>다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, <br>민속촌이 있는 제주의 인기 관광지입니다.</p>
                             </div>
                         </div>
                         <div class="map-info5">
-                            <a href="#"><img src="imgs/map-side.jpg" alt="섭지코지" ></a>
+                            <a href="detail.html"><img src="imgs/map-side5.jpg" alt="섭지코지" ></a>
                             <div class="info-text-wrap">
                                 <div class="info-text">
-                                    <h3>섭지코지</h3>
-                                    <a href="#"><i class="fa-solid fa-circle-plus"></i></a>
+                                    <h3><a href="detail.html">섭지코지</a></h3>
+                                    <a href="detail.html"><i class="fa-solid fa-circle-plus"></i></a>
                                 </div>
-                                <p>다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.</p>
+                                <p>다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, <br>민속촌이 있는 제주의 인기 관광지입니다.</p>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -393,46 +413,50 @@
                             <div class="theme-info1">
                                 <div class="text-wrap">
                                     <h3>제주시 애월읍 곽지리 1359</h3>
-                                    <div class="theme-heart"><li><a href="#"><i class="fa-regular fa-heart"></i></a></li></div>
+                                    <div class="theme-heart"><i class="fa-regular fa-heart"></i></div>
                                 </div>
-                                <h2>한담해안산책로</h2>
-                                <p>집으로 돌아가기 전, 여행의 대미를 장식할 장소로는 한담해안산책로를 추천합니다.</p>
-                                <p>애월항에서 곽지과물해변까지 해안을 따라서 조성된 산책로인데요.</p>
-                                <p>파도가 첨벙거리는 해안 길을 따라 걸을 수 있어요. 일몰이 잘 보인다는 점도 매력 포인트랍니다.</p>
-                                <div class="theme-plus"><a href="detail.html"><i class="fa-solid fa-circle-plus"></i></a></div>
+                                <div class="info-detail-text"><a href="detail.html">
+                                    <h2>한담해안산책로</h2>
+                                    <p>집으로 돌아가기 전, 여행의 대미를 장식할 장소로는 한담해안산책로를 추천합니다.</p>
+                                    <p>애월항에서 곽지과물해변까지 해안을 따라서 조성된 산책로인데요.</p>
+                                    <p>파도가 첨벙거리는 해안 길을 따라 걸을 수 있어요. 일몰이 잘 보인다는 점도 매력 포인트랍니다.</p>
+                                </a></div>
                             </div>
                             <div class="theme-info2">
                                 <div class="text-wrap">
                                     <h3>제주특별자치도 제주시 도두1동</h3>
                                     <div class="theme-heart"><li><a href="#"><i class="fa-regular fa-heart"></i></a></li></div>
                                 </div>
-                                <h2>무지개 해안도로</h2>
-                                <p>파란 제주 하늘과 그 아래로 끝없이 펼쳐진 수평선을 마주할 수 있는 용담이호해안도로. </p>
-                                <p>제주공항과 가까운 곳에 있어 여행 전후로 가볍게 드라이브를 즐길 수 있는 곳이다.</p>
-                                <p>평소 사진을 자주 찍어보지 않았던 사람들과 우정 스냅 입문자에게 추천하는 장소다.</p>
-                                <div class="theme-plus"><a href="detail.html"><i class="fa-solid fa-circle-plus"></i></a></div>
+                                <div class="info-detail-text"><a href="detail.html"></a>
+                                    <h2>무지개 해안도로</h2>
+                                    <p>파란 제주 하늘과 그 아래로 끝없이 펼쳐진 수평선을 마주할 수 있는 용담이호해안도로. </p>
+                                    <p>제주공항과 가까운 곳에 있어 여행 전후로 가볍게 드라이브를 즐길 수 있는 곳이다.</p>
+                                    <p>평소 사진을 자주 찍어보지 않았던 사람들과 우정 스냅 입문자에게 추천하는 장소다.</p>
+                                </a></div>
                             </div>
                             <div class="theme-info3">
                                 <div class="text-wrap">
                                     <h3>제주시 구좌읍 송당리 2173</h3>
                                     <div class="theme-heart"><li><a href="#"><i class="fa-regular fa-heart"></i></a></li></div>
                                 </div>
-                                <h2>안돌오름 비밀의 숲</h2>
-                                <p>최근 몇 년 사이 제주에서 가장 사진찍기 좋은 명소로 떠오른 곳이 바로 안돌오름 비밀의 숲입니다.</p>
-                                <p>싱그러운 풍경과 하늘을 향해 쭉쭉 뻗은 편백나무의 행렬과 민트색 차량의 조합이 조화로워</p>
-                                <p>마치 그림 속에 서 있는 듯한 풍경과 맑은 피톤치드공기와 함께 산책하기 좋은 여행지 입니다.</p>
-                                <div class="theme-plus"><a href="detail.html"><i class="fa-solid fa-circle-plus"></i></a></div>
+                                <div class="info-detail-text"><a href="detail.html"></a>
+                                    <h2>안돌오름 비밀의 숲</h2>
+                                    <p>최근 몇 년 사이 제주에서 가장 사진찍기 좋은 명소로 떠오른 곳이 바로 안돌오름 비밀의 숲입니다.</p>
+                                    <p>싱그러운 풍경과 하늘을 향해 쭉쭉 뻗은 편백나무의 행렬과 민트색 차량의 조합이 조화로워</p>
+                                    <p>마치 그림 속에 서 있는 듯한 풍경과 맑은 피톤치드공기와 함께 산책하기 좋은 여행지 입니다.</p>
+                                </a></div>
                             </div>
                             <div class="theme-info4">
                                 <div class="text-wrap">
                                     <h3>제주시 조천읍 교래리</h3>
                                     <div class="theme-heart"><li><a href="#"><i class="fa-regular fa-heart"></i></a></li></div>
                                 </div>
-                                <h2>사려니 숲길</h2>
-                                <p>사려니 숲길은 약 15km나 이어지기 때문에 편안한 옷과 신발을 착용하고 도전해 보세요. </p>
-                                <p>한창 활동량이 많을 나이의 아이가 있다면 함께 하늘 위로 쭉쭉 뻗은 나무숲 속을 걸으며</p>
-                                <p>대화를 나누는 등 가족끼리 오붓한 시간을 보낼 수 있어 더욱 좋아요.</p>
-                                <div class="theme-plus"><a href="detail.html"><i class="fa-solid fa-circle-plus"></i></a></div>
+                                <div class="info-detail-text"><a href="detail.html"></a>
+                                    <h2>사려니 숲길</h2>
+                                    <p>사려니 숲길은 약 15km나 이어지기 때문에 편안한 옷과 신발을 착용하고 도전해 보세요. </p>
+                                    <p>한창 활동량이 많을 나이의 아이가 있다면 함께 하늘 위로 쭉쭉 뻗은 나무숲 속을 걸으며</p>
+                                    <p>대화를 나누는 등 가족끼리 오붓한 시간을 보낼 수 있어 더욱 좋아요.</p>
+                                </a></div>
                             </div>
                         </div>
                         <div class="theme-bg"></div>

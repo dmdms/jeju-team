@@ -22,19 +22,29 @@ function scrollmenu(){
             $("#gnb").css('color','#333333');
             $(".member").css('color','#333333');
             $(".logo").removeClass("d-none");
+            $(".fa-bars").css('color','#333333');
+            $(".m-menu").css('top','6%');
         } else{
             $('header').removeClass('active');
             $("#gnb").css('color','white');
             $(".member").css('color','white');
             $(".logo:last").addClass("d-none");
+            $(".fa-bars").css('color','white');
+            $(".m-menu").css('top','0');
         }
     })
 }
 function heart(){
-    $(".slide-text > i").click(function(){
-        $(this).removeClass("fa-reguler");
-        $(this).addClass("fa-solid");
-        $(this).css('color','#e63462');
+    $(".theme-heart").click(function(){
+        if(! $(this).children().hasClass("fa-solid")){
+            $(this).children().removeClass("fa-reguler");
+            $(this).children().addClass("fa-solid");
+            $(this).css('color','#e63462');
+        } else{
+            $(this).children().addClass("fa-reguler");
+            $(this).children().removeClass("fa-solid");
+            $(this).css('color','#333');
+        }
     })
 }
 function tabMenu(){
