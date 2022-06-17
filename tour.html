@@ -517,4 +517,523 @@
     <script src="script/cart.js"></script>
     <script src="script/main.js"></script>
 </body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>에디트립 투어페이지</title>
+    <link rel="stylesheet" href="css-heeji/tour.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c3e7a3c02b.js" crossorigin="anonymous"></script>  
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="css-heeji/basket.css">
+    <style>
+        #modal {
+            background: white;
+            display: none;
+            position: fixed;
+            
+        }
+    #btn1{
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: 0;
+            margin-top: 100px;
+            margin-left: 170px;
+            padding: 10px 20px;
+            background: #003893;
+            color: #fff;
+        }
+        #btn2{
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: 0;
+            padding: 10px 20px;
+            background: #003893;
+            color: #fff;
+        }
+        #btn-group button:hover{
+            color: #003893;
+            background: white;
+            border: 2px solid lightgrey ;
+        }
+
+        #cart-body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 1rem
+        }
+        .row {
+            width: 100%;
+            display: flex
+        }
+        #cart-body .cart-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .cart-img img {
+            max-width: 100%;
+            object-fit: cover;
+        }
+  </style>
+</head>
+<body>
+    <script>
+        $(function(){
+            if(localStorage.length > 0) {
+                $("#modal").show();
+                loadFromCart();
+            }
+        });
+        function loadFromCart(){
+            var data = JSON.parse(localStorage.getItem('myCart'));
+            var bodyDOM = '';
+            bodyDOM += `
+                <div class="row">
+                    <div class="cart-img"><img src="${data[0].img}" alt="카트"></div>
+                    <ul class="cart-text">
+                        <li class="cart-title">
+                            <a href="#">
+                                <p>${data[0].cate}</p>
+                            </a>
+                        </li>
+                        <li class="info">
+                            <p>${data[0].title}</p>
+                            <p class="info2">${data[0].addr}</p>
+                        </li>
+                    </ul>
+                    <div class="cancel"><a href="#"><i class="fa-solid fa-xmark"></i></a></div>
+                </div>
+            `;
+            bodyDOM += `
+                <div class="row">
+                    <div class="cart-img"><img src="${data[1].img}" alt="카트"></div>
+                    <ul class="cart-text">
+                        <li class="cart-title">
+                            <a href="#">
+                                <p>${data[1].cate}</p>
+                            </a>
+                        </li>
+                        <li class="info">
+                            <p>${data[1].title}</p>
+                            <p class="info2">${data[1].addr}</p>
+                        </li>
+                    </ul>
+                    <div class="cancel"><a href="#"><i class="fa-solid fa-xmark"></i></a></div>
+                </div>
+            `;
+            bodyDOM += `
+                <div class="row">
+                    <div class="cart-img"><img src="${data[1].img}" alt="카트"></div>
+                    <ul class="cart-text">
+                        <li class="cart-title">
+                            <a href="#">
+                                <p>${data[1].cate}</p>
+                            </a>
+                        </li>
+                        <li class="info">
+                            <p>${data[1].title}</p>
+                            <p class="info2">${data[1].addr}</p>
+                        </li>
+                    </ul>
+                    <div class="cancel"><a href="#"><i class="fa-solid fa-xmark"></i></a></div>
+                </div>
+            `;
+            
+            $("#cart-body").html(bodyDOM);
+        }
+
+    </script>
+    <!-- cart : modal -->
+    <div id="modal">
+        <h2>check list</h2>
+        <div class="list-cart">
+            <div id="cart-body">
+
+            </div>            
+        </div>        
+        
+        <div id="btn-group">
+            <button id="btn1">경로탐색</button>
+            <button id="btn2">닫기</button>
+        </div>
+    </div>
+    <!-- modal end-->
+    
+    <header>
+        <div class="header-wrap">
+            <div class="logo-wrap">
+                <div class="logo"><a href="index.html"><img src="images-heeji/logo.png" alt="에디트립"></a></div>
+                <div class="logo d-none"><a href="index.html"><img src="images-heeji/logo2.png" alt="에디트립"></a></div>
+            </div>
+            <nav>
+                <ul id="gnb">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                </ul>
+            </nav>
+            <ul class="member">
+                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="tour-top">
+        <div class="tour-text-wrap">
+            <div class="tour-text">
+                <h2>DESTINATIONS</h2>
+                <p>관광지</p>
+            </div>
+        </div>
+        <img src="images-heeji/tour.main.png" alt="">
+    </div>
+   
+    <div class="home-tour">
+        <div class="home-icon"><a href="index.html"><i class="fa-solid fa-house"></i></a></div>
+        <div class="home-tour-text">
+            <p><a href="index.html">홈</a></p>
+            <p>&gt;</p>
+            <p><a href="tour.html">관광지</a></p>
+        </div>
+    </div>
+     
+    <div class="best-title">
+        <h2>추천 관광지</h2>
+        <p>BEST</p>
+    </div>
+
+    <!-- slide -->
+    <ul class="slider">
+        <li class="slider1">
+            <img src="images-heeji/one.png" alt="1">
+            <div class="slider-text">
+                <h2>김녕미로공원</h2>
+                <p>제주특별자치도 제주시 구좌읍 안장굴길122</p>
+            </div>
+        </li>
+        <li class="slider2">
+            <img src="images-heeji/two.png" alt="2">
+            <div class="slider-text">
+                <h2>카멜리아 힐</h2>
+                <p>제주특별자치도 서귀포시 안덕면 병악로 166</p>
+            </div>
+        </li>
+        <li class="slider3">
+            <img src="images-heeji/three.png" alt="3">
+            <div class="slider-text">
+                <h2>황우지 선녀탕</h2>
+                <p>제주특별자치도 서귀포시 서흥동 795-5</p>
+            </div>
+        </li>
+        <li class="slider4">
+            <img src="images-heeji/four.png" alt="4">
+            <div class="slider-text">
+                <h2>천지연 폭포</h2>
+                <p>제주 서귀포시 천지동 667-7</p>
+            </div>
+        </li>
+    </ul>
+    <!-- DESTINATIONS TAB  -->
+    <div class="tab-title">
+        <h2>관광</h2>
+        <p>DESTINATIONS</p>
+    </div>
+    <div class="spot-tab-wrap">
+        <div class="spot">
+            <div class="spot-title">
+                <p class="tab1"><a href="#" onclick="return false">동쪽</a></p>
+                <p class="tab2"><a href="#" onclick="return false">서쪽</a> </p>
+                <p class="tab3"><a href="#" onclick="return false">남쪽</a></p>
+                <p class="tab4"><a href="#" onclick="return false">북쪽</a></p>
+            </div>
+            <script>
+                var dateObj = [];
+                $(function(){
+                    $(".dong > li > a").click(function(e){
+                        e.preventDefault();
+                        var img = $(this).children("img").attr("src");
+                        var title = $(this).children("img").attr("alt");
+                        var cate = $(this).children("img").attr("data-cate");
+                        var addr = $(this).children("img").attr("data-addr");
+                        //console.log(typeof img, typeof title, typeof cate, typeof desc);                       
+                        saveToCart(img, cate, title, addr);
+                        var choice = confirm("item in cart, showing cart?")
+                        choice ? $("#modal").show() : $("#modal").hide();
+                    })
+                })
+                function saveToCart(img, cate, title, addr) {
+                    dateObj.push({
+                        img,
+                        cate,
+                        title,
+                        addr
+                    })
+                    localStorage.setItem('myCart', JSON.stringify(dateObj));
+                }
+            </script>
+            <div class="spot-list1">
+                <ul class="dong">
+                    <li><a href="#">
+                            <img src="images-heeji/dong1.png" alt="섬머리도두봉" data-cate="관광지" data-addr="제주특별자치도 제주시 도두동 산1"></a>
+                        <p><a href="#">섬머리도두봉</a></p>
+                        <div class="tag">
+                            <p>#키세스존</p>
+                            <p>#인생샷</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong2.jpg" alt="협재해수욕장" data-cate="관광지" data-desc="제주 제주시 한림읍 협재리 2497-1"></a>
+                        <p><a href="#">협재해수욕장</a></p>
+                        <div class="tag">
+                            <p>#백사장</p>
+                            <p>#에메랄드빛</p>
+                            <p>#실크로드</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong3.jpg" alt="사계해변" data-cate="관광지" data-desc="제주 제주시 한림읍 협재리 2497-1"></a>
+                        <p><a href="#">사계해변</a></p>
+                        <div class="tag">
+                            <p>#독특한 지형</p>
+                            <p>#세계 지질공원</p>
+                            <p>#검은색 모래</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="dong2">
+                    <li><a href="#"><img src="images-heeji/dong4.jpg" alt="신창풍차해안도로" data-cate="관광지" data-desc="제주 제주시 한경면 신창리 1481-23"></a>
+                        <p><a href="#">신창풍차해안도로</a></p>
+                        <div class="tag">
+                            <p>#저녁노을</p>
+                            <p>#풍력발전기</p>
+                            <p>#석양</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong5.png" alt="우도" data-cate="관광지" data-desc="제주 제주시 우도면"></a>
+                        <p><a href="#">우도</a></p>
+                        <div class="tag">
+                            <p>#또 다른 섬</p>
+                            <p>#소가 누워 있는 모습</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong6.png" alt="한라산 국립공원" data-cate="관광지" data-desc="제주 서귀포시 토평동 산15-1"></a>
+                        <p><a href="#">한라산 국립공원</a></p>
+                        <div class="tag">
+                            <p>#화산</p>
+                            <p>#백록담</p>
+                            <p>#화산호</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="spot-list2">
+                <ul class="dong">
+                    <li><a href="#">
+                            <img src="images-heeji/seo1.png" alt="섬머리도두봉" data-cate="관광지" data-addr="제주특별자치도 제주시 구좌읍">
+                        </a>
+                        <p><a href="#">세화해변</a></p>
+                        <div class="tag">
+                            <p>#하얀 모래</p>
+                            <p>#에메랄드빛 </p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/seo2.png" alt="협재해수욕장" data-cate="관광지" data-desc="제주 서귀포시 성산읍 고성리"></a>
+                        <p><a href="#">섭지코지</a></p>
+                        <div class="tag">
+                            <p>#해안 풍경</p>
+                            <p>#제주조랑말</p>
+                            <p>#일출봉 배경</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong3.jpg" alt="사계해변" data-cate="관광지" data-desc="제주 제주시 한림읍 협재리 2497-1"></a>
+                        <p><a href="#">사계해변</a></p>
+                        <div class="tag">
+                            <p>#독특한 지형</p>
+                            <p>#세계 지질공원</p>
+                            <p>#검은색 모래</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="dong2">
+                    <li><a href="#"><img src="images-heeji/dong4.jpg" alt="신창풍차해안도로" data-cate="관광지" data-desc="제주 제주시 한경면 신창리 1481-23"></a>
+                        <p><a href="#">신창풍차해안도로</a></p>
+                        <div class="tag">
+                            <p>#저녁노을</p>
+                            <p>#풍력발전기</p>
+                            <p>#석양</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong5.png" alt="우도" data-cate="관광지" data-desc="제주 제주시 우도면"></a>
+                        <p><a href="#">우도</a></p>
+                        <div class="tag">
+                            <p>#또 다른 섬</p>
+                            <p>#소가 누워 있는 모습</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong6.png" alt="한라산 국립공원" data-cate="관광지" data-desc="제주 서귀포시 토평동 산15-1"></a>
+                        <p><a href="#">한라산 국립공원</a></p>
+                        <div class="tag">
+                            <p>#화산</p>
+                            <p>#백록담</p>
+                            <p>#화산호</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="spot-list3">
+                <ul class="dong">
+                    <li><a href="#">
+                            <img src="images-heeji/dong1.png" alt="섬머리도두봉" data-cate="관광지" data-addr="제주특별자치도 제주시 도두동 산1">
+                        </a>
+                        <p><a href="#">섬머리도두봉</a></p>
+                        <div class="tag">
+                            <p>#키세스존</p>
+                            <p>#인생샷</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong2.jpg" alt="협재해수욕장" data-cate="관광지" data-desc="제주 제주시 한림읍 협재리 2497-1"></a>
+                        <p><a href="#">협재해수욕장</a></p>
+                        <div class="tag">
+                            <p>#백사장</p>
+                            <p>#에메랄드빛</p>
+                            <p>#실크로드</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong3.jpg" alt="사계해변" data-cate="관광지" data-desc="제주 제주시 한림읍 협재리 2497-1"></a>
+                        <p><a href="#">사계해변</a></p>
+                        <div class="tag">
+                            <p>#독특한 지형</p>
+                            <p>#세계 지질공원</p>
+                            <p>#검은색 모래</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="dong2">
+                    <li><a href="#"><img src="images-heeji/dong4.jpg" alt="신창풍차해안도로" data-cate="관광지" data-desc="제주 제주시 한경면 신창리 1481-23"></a>
+                        <p><a href="#">신창풍차해안도로</a></p>
+                        <div class="tag">
+                            <p>#저녁노을</p>
+                            <p>#풍력발전기</p>
+                            <p>#석양</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong5.png" alt="우도" data-cate="관광지" data-desc="제주 제주시 우도면"></a>
+                        <p><a href="#">우도</a></p>
+                        <div class="tag">
+                            <p>#또 다른 섬</p>
+                            <p>#소가 누워 있는 모습</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong6.png" alt="한라산 국립공원" data-cate="관광지" data-desc="제주 서귀포시 토평동 산15-1"></a>
+                        <p><a href="#">한라산 국립공원</a></p>
+                        <div class="tag">
+                            <p>#화산</p>
+                            <p>#백록담</p>
+                            <p>#화산호</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="spot-list4">
+                <ul class="dong">
+                    <li><a href="#">
+                            <img src="images-heeji/dong1.png" alt="섬머리도두봉" data-cate="관광지" data-addr="제주특별자치도 제주시 도두동 산1">
+                        </a>
+                        <p><a href="#">섬머리도두봉</a></p>
+                        <div class="tag">
+                            <p>#키세스존</p>
+                            <p>#인생샷</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong2.jpg" alt="협재해수욕장" data-cate="관광지" data-desc="제주 제주시 한림읍 협재리 2497-1"></a>
+                        <p><a href="#">협재해수욕장</a></p>
+                        <div class="tag">
+                            <p>#백사장</p>
+                            <p>#에메랄드빛</p>
+                            <p>#실크로드</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong3.jpg" alt="사계해변" data-cate="관광지" data-desc="제주 제주시 한림읍 협재리 2497-1"></a>
+                        <p><a href="#">사계해변</a></p>
+                        <div class="tag">
+                            <p>#독특한 지형</p>
+                            <p>#세계 지질공원</p>
+                            <p>#검은색 모래</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="dong2">
+                    <li><a href="#"><img src="images-heeji/dong4.jpg" alt="신창풍차해안도로" data-cate="관광지" data-desc="제주 제주시 한경면 신창리 1481-23"></a>
+                        <p><a href="#">신창풍차해안도로</a></p>
+                        <div class="tag">
+                            <p>#저녁노을</p>
+                            <p>#풍력발전기</p>
+                            <p>#석양</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong5.png" alt="우도" data-cate="관광지" data-desc="제주 제주시 우도면"></a>
+                        <p><a href="#">우도</a></p>
+                        <div class="tag">
+                            <p>#또 다른 섬</p>
+                            <p>#소가 누워 있는 모습</p>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="images-heeji/dong6.png" alt="한라산 국립공원" data-cate="관광지" data-desc="제주 서귀포시 토평동 산15-1"></a>
+                        <p><a href="#">한라산 국립공원</a></p>
+                        <div class="tag">
+                            <p>#화산</p>
+                            <p>#백록담</p>
+                            <p>#화산호</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+         
+        </div>
+    </div>
+<!-- footer -->
+    <div class="topper">
+        <i class="fa-regular fa-circle-up"></i>
+    </div>
+    <footer>
+        <d iv class="footer-wrap">
+            <div class="footer-info">
+                <div class="xnb">
+                    <ul>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                    </ul>
+                </div>
+                <address>
+                    상호 : 에디트립 , 대표자 : 박서준 , 사업자등록번호 : 482-88-01140<br>
+                    주소 : 서울시 서초구 바우뫼로 11인길 25 101호 , TEL : 02.2235.8955~6 , FAX : 02.2237.6185
+                    <p>copyright &copy; 2022 by에디트립 all rights reserved.</p>
+                </address>
+            </div>
+            <div class="ft-back"><img src="images-heeji/logo-ft.png" alt=""></div>
+        </d>
+    </footer>
+    <script src="script/cart.js"></script>
+    <script src="script/main.js"></script>
+</body>
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -175,4 +176,183 @@ var marker = new kakao.maps.Marker({
 marker.setMap(map);
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>에디트립</title>
+    <link rel="stylesheet" href="css-heeji/act-detail.css">
+    <script src="https://kit.fontawesome.com/c3e7a3c02b.js" crossorigin="anonymous"></script>  
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="css-heeji/basket.css">
+</head>
+<body>
+    <!-- cart : modal -->
+    <div id="modal">
+        <h2>check list</h2>
+        <div class="list-cart">
+            <div id="cart-body">
+
+            </div>            
+        </div>        
+        
+        <div id="btn-group">
+            <button id="btn1">경로탐색</button>
+            <button id="btn2">닫기</button>
+        </div>
+    </div>
+    <!-- modal end-->
+    <header>
+        <div class="header-wrap">
+            <div class="logo-wrap">
+                <div class="logo"><a href="index.html"><img src="images-heeji/logo.png" alt="에디트립"></a></div>
+                <div class="logo d-none"><a href="index.html"><img src="images-heeji/logo2.png" alt="에디트립"></a></div>
+            </div>
+            <nav>
+                <ul id="gnb">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                </ul>
+            </nav>
+            <ul class="member">
+                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="tour-top">
+        <div class="tour-text-wrap">
+            <div class="tour-text">
+                <h2>Parasailing</h2>
+                <p>패러세일링</p>
+            </div>
+        </div>
+        <img src="images-heeji/act.main.png" alt="">
+    </div>
+   
+    <div class="home-tour">
+        <div class="home-icon"><a href="index.html"><i class="fa-solid fa-house"></i></a></div>
+        <div class="home-tour-text">
+            <p><a href="index.html">홈</a></p>
+            <p>&gt;</p>
+            <p><a href="tour.html">체험</a></p>
+            <p>&gt;</p>
+            <p><a href="tour.html">페러세일링</a></p>
+        </div>
+    </div>  
+   <div class="wrap-act">
+       
+        <div class="act-detail-wrap">
+            <div class="act-de-img">
+                <img src="images-heeji/para-m.jpg" alt="" class="animate__animated animate__fadeInLeft">
+            </div>
+                <div class="act-de-title">
+                    <h2>패러세일링</h2>
+                    <h3>Parasailing in Jeju Island</h3>
+                    <p>제주 중문 바다에서 패러세일링을 즐기는데,<br>
+                        멀리 한라산을 비롯해 바닷가에 펼쳐진 주상절리대와 범섬, <br>
+                        문섬이 발아래로 내려다보입니다.</p>
+                </div>
+                    <div class="act-de-img2">
+                        <img src="images-heeji/para2.jpg" alt="" class="animate__animated animate__fadeInRight">
+                    </div>
+        </div>
+       
+   </div>
+    <div class="act-wrap-title">
+        <h2>INFORMAION</h2>
+    </div>
+    <div class="act-info-wrap1">
+        <ul class="act-de-info">
+            <li><h2>국내 패러세일링 명소</h2>
+                <ul class="act-info-text">
+                    <li>제주제트: 제주도 서귀포시 대포로 172-5 (☎064-739-3939)</li>
+                    <li>제주해양레저: 제주도 서귀포시 중문관광로 192 (☎064-738-5111)</li>
+                </ul>
+            </li>
+            <li><h2>요금 및 탑승안내</h2>
+                <ul class="act-info-text">
+                    <li>한 보트에 5~7명 정도 탑승하며 40분~1시간 정도 소요된다. </li>
+                    <li>요금은 1인당 6만 원 선입니다.</li>
+                </ul>
+            </li>
+            
+        </ul>
+        <img src="images-heeji/para-info.png" alt="">
+    </div>
+    <div class="top-map-wrap">
+        <div class="act-map-wrap">
+            <div class="act-map-title">
+                <img src="images-heeji/map-icon.svg" alt="map-icon">
+                <h2>map</h2>
+            </div>
+            <div id="map"></div>
+        </div>
+        </div>
+    </div>
+    
+<!-- footer -->
+    <div class="topper">
+        <i class="fa-regular fa-circle-up"></i>
+    </div>
+    <footer>
+        <d iv class="footer-wrap">
+            <div class="footer-info">
+                <div class="xnb">
+                    <ul>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                    </ul>
+                </div>
+                <address>
+                    상호 : 에디트립 , 대표자 : 박서준 , 사업자등록번호 : 482-88-01140<br>
+                    주소 : 서울시 서초구 바우뫼로 11인길 25 101호 , TEL : 02.2235.8955~6 , FAX : 02.2237.6185
+                    <p>copyright &copy; 2022 by에디트립 all rights reserved.</p>
+                </address>
+            </div>
+            <div class="ft-back"><img src="images-heeji/logo-ft.png" alt=""></div>
+        </d>
+    </footer>
+    <script src="script/main.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=84855f7dbe2c82247dc168f4fcd796f2"></script>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.245044884167534, 126.41254159298187), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+// 마커가 표시될 위치입니다 
+var markerPosition  = new kakao.maps.LatLng(33.245044884167534, 126.41254159298187); 
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);
+    </script>
+</body>
+>>>>>>> 920e8a57c3e2cd549e68d52bb13fedf9028839f2
 </html>

@@ -1,0 +1,12 @@
+.slider1{
+    background: url("../images-heeji/slide-food1.png") no-repeat center/cover;
+  }
+  .slider2{
+    background: url('../images-heeji/slide-food2.png') no-repeat center/cover;
+  }
+  .slider3{
+    background: url('../images-heeji/slide-food3.png') no-repeat center/cover;
+  }
+  .slider4{
+    background: url('../images-heeji/slide-food4.png') no-repeat center/cover;
+  }
