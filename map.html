@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>에디트립</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/jeong.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+</head>
+<body class="no-scrolls">
+    <div id="modal">
+        <h2>MY CART</h2>
+        <div class="list-cart">
+            <div class="cart-img"><img src="imgs/cart1.png" alt="카트"></div>
+
+            <ul class="cart-text">
+                <li class="cart-title">
+                        <p>엑티비티</p>
+                </li>
+                <li class="info">
+                    <p>얼라이브카트</p>
+                    <p class="info2">제주 서귀포시 중문관광로 42</p>
+                </li>
+            </ul>
+            <div class="cancel"><a href="#" onclick="return false"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        
+        <div class="list-museum">
+            <div class="osulloc-img"><img src="imgs/cart3.png" alt="오설록"></div>
+
+            <ul class="museum-text">
+                <li class="museum-title">
+                        <p>관광지</p>
+                </li>
+                <li class="info">
+                    <p>오설록 티 뮤지엄</p>
+                    <p class="info2">제주특별자치도 서귀포시 안덕면 신화역사로 15 </p>
+                </li>
+            </ul>
+            <div class="cancel"><a href="#" onclick="return false"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        <div class="list-hotel">
+            <div class="hotel-img"><img src="imgs/cart2.png" alt="호텔"></div>
+
+            <ul class="hotel-text">
+                <li class="hotel-title">
+                        <p>숙박</p>
+                </li>
+                <li class="info">
+                    <p>오설록 티 뮤지엄</p>
+                    <p class="info2">제주특별자치도 서귀포시 안덕면 신화역사로 15 </p>
+                </li>
+            </ul>
+            <div class="cancel"><a href="#" onclick="return false"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        <div id="btn-group">
+            <button id="btn1">닫기</button>
+            <a href="map.html"><button id="btn2">경로탐색</button></a>
+        </div>
+    </div>
+    <header>
+        <h1 class="d-none">에디트립</h1>
+        <div class="header-wrap">
+            <div class="logo-wrap">
+                <div class="logo"><a href="index.html"><img src="imgs/logo2.png" alt="에디트립"></a></div>
+                <div class="logo d-none"><a href="index.html"><img src="imgs/logo2.png" alt="에디트립"></a></div>
+            </div>
+            <nav>
+                <h2 class="d-none">에디트립 메뉴</h2>
+                <ul id="gnb">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                </ul>
+            </nav>
+            <ul class="member">
+                <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+                <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
+            <div id="m-menu">
+                <ul class="burger">
+                    <li><i class="fa-solid fa-bars"></i></li>
+                    <li class="d-none"><i class="fa-solid fa-xmark"></i></li>
+                </ul>
+                <ul class="m-menu animate__animated animate__slideInRight">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                    <li>
+                        <ul class="menu-sub">
+                            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+                            <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="setting">
+        <div class="choice">
+            <select name="여행지" id="choice1">
+                <option value="">여행지를 선택하세요.</option>
+                <option value="">한림공원</option>
+                <option value="">비자림</option>
+                <option value="">한라산 국립공원</option>
+                <option value="">우도</option>
+                <option value="">섭지코지</option>
+            </select>
+            <select name="출발시간" id="choice2">
+                <option value="">출발시간</option>
+                <option value="">06:00 - 07:00</option>
+                <option value="">07:00 - 08:00</option>
+                <option value="">08:00 - 09:00</option>
+                <option value="">09:00 - 10:00</option>
+                <option value="">10:00 - 11:00</option>
+                <option value="">11:00 - 12:00</option>
+                <option value="">12:00 - 13:00</option>
+                <option value="">13:00 - 14:00</option>
+                <option value="">14:00 - 15:00</option>
+                <option value="">15:00 - 16:00</option>
+            </select>
+        </div>
+        <div class="transport">
+            <div><i class="fa-solid fa-car"></i> 자동차</div>
+            <div><i class="fa-solid fa-train"></i> 대중교통</div>
+            <div><i class="fa-solid fa-signs-post"></i> 도보</div>
+        </div>
+        <div class="result-list-wrap">
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 1
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 2
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 3
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 4
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 5
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 6
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+            <div class="result-wrap">
+                <ul class="title">
+                    <li class="result-down"><a href="#" onclick="return false"><i class="fa-solid fa-angles-up"></i></a></li>
+                    <li>DAY - 7
+                        <ul class="result">
+                            <table >
+                                <tr>
+                                    <td></td>
+                                    <td>출발</td>
+                                    <td>도착</td>
+                                    <td>이동 및 소요거리</td>
+                                </tr>
+                                <tr>
+                                    <td>검멀레해변</td>
+                                    <td>09:00</td>
+                                    <td>09:30</td>
+                                    <td>자동차로 이동 <span> 1km</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한림공원</td>
+                                    <td>14:00</td>
+                                    <td>14:30</td>
+                                    <td>도보로 이동 <span> 500m</span></td>
+                                </tr>
+                                <tr>
+                                    <td>섭지코지</td>
+                                    <td>16:00</td>
+                                    <td>17:30</td>
+                                    <td>자동차로 이동 <span> 2km</span></td>
+                                </tr>
+                            </table>
+                        </ul>
+                    </li>
+                    <li class="result-delete"><a href="#" onclick="return false"><i class="fa-regular fa-trash-can"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="button-wrap">
+            <div class="reset"><a href="map.html">초기화</a></div>
+            <div class="save"><a href="schedule.html">저장하기</a></div>
+        </div>
+    </div>
+    <div id="map"></div>
+                    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=84855f7dbe2c82247dc168f4fcd796f2"></script>
+                    <script>
+                        var marker = null;
+                        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                            mapOption = { 
+                                center: new kakao.maps.LatLng(33.35899256258578, 126.52930665954167), // 지도의 중심좌표
+                                level: 11 // 지도의 확대 레벨
+                            };
+        
+                            var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+                            function resizeMap() {
+                        var mapContainer = document.getElementById('map');
+                        mapContainer.style.width = '100%';
+                        mapContainer.style.height = '100%'; 
+                    }
+                    function relayout() {    
+                        
+                        // 지도를 표시하는 div 크기를 변경한 이후 지도가 정상적으로 표출되지 않을 수도 있습니다
+                        // 크기를 변경한 이후에는 반드시  map.relayout 함수를 호출해야 합니다 
+                        // window의 resize 이벤트에 의한 크기변경은 map.relayout 함수가 자동으로 호출됩니다
+                        map.relayout();
+                    }
+                                var positions = [
+                                {
+                                    title: '한림공원', 
+                                    latlng: new kakao.maps.LatLng(33.389223094865024, 126.24007284642093),
+                                    content: ['http://dmswl217.dothome.co.kr/images-eunji/map-side.png', '한림 공원','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']                          
+                                },
+                                {
+                                    title: '비자림', 
+                                    latlng: new kakao.maps.LatLng(33.49039216408107, 126.81000264971824),
+                                    content: ['http://dmswl217.dothome.co.kr/images-eunji/map-side.png', '비자림','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']   
+                                },
+                                {
+                                    title: '한라산 국립공원', 
+                                    latlng: new kakao.maps.LatLng(33.35899256258578, 126.52930665954167),
+                                    content: ['http://dmswl217.dothome.co.kr/images-eunji/map-side.png', '한라산 국립공원','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']   
+                                },
+                                {
+                                    title: '우도',
+                                    latlng: new kakao.maps.LatLng(33.50427922494985, 126.95530466524886),
+                                    content: ['http://dmswl217.dothome.co.kr/images-eunji/map-side.png', '우도','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']   
+                                },
+                                {
+                                    title: '섭지코지',
+                                    latlng: new kakao.maps.LatLng(33.4239883908754, 126.93031458904902),
+                                    content: ['http://dmswl217.dothome.co.kr/images-eunji/map-side.png', '섭지코지','다양하고 아름다운 정원, 2개의 동굴, 작은 동물원, 민속촌이 있는 제주의 인기 관광지입니다.']   
+                                }
+                            ];
+                        for (var i = 0; i < positions.length; i ++) {
+                            
+                            // 마커를 생성합니다
+                            let marker = new kakao.maps.Marker({
+                                map: map, // 마커를 표시할 지도
+                                position: positions[i].latlng, // 마커를 표시할 위치
+                                title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                            });
+        
+                            // 마커에 표시할 인포윈도우를 생성합니다 
+                            var infowindow = new kakao.maps.InfoWindow({
+                                content: positions[i].content[i] // 인포윈도우에 표시할 내용
+                            });
+                            // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+                            // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+                            // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+                            // kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+                            // kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+                            // 마커에 클릭이벤트를 등록합니다
+                kakao.maps.event.addListener(marker, 'click', function() {
+                    // 마커 위에 인포윈도우를 표시합니다
+                    infowindow.open(map, marker);
+                    
+                });
+                        }
+                                        // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+                        function makeOverListener(map, marker, infowindow) {
+                            return function() {
+                                //infowindow.open(map, marker);
+                                console.log(1111)
+        
+                            };
+                        }
+        
+                        // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+                        function makeOutListener(infowindow) {
+                            return function() {
+                                infowindow.close();
+                            };
+                        }
+                        function setDraggable(draggable) {
+    // 마우스 드래그로 지도 이동 가능여부를 설정합니다
+    map.setDraggable(draggable);    
+}
+                        </script>
+
+                            <footer>
+                                <div class="footer-wrap">
+                                    <div class="footer-info">
+                                        <div class="xnb">
+                                            <ul>
+                                                <li><a href="#">개인정보취급방침</a></li>
+                                                <li><a href="#">이용약관</a></li>
+                                                <li><a href="#">이메일무단수집거부</a></li>
+                                            </ul>
+                                        </div>
+                                        <address>
+                                            상호 : 에디트립 , 대표자 : 박서준 , 사업자등록번호 : 482-88-01140<br>
+                                            주소 : 서울시 서초구 바우뫼로 11인길 25 101호 , TEL : 02.2235.8955~6 , FAX : 02.2237.6185
+                                            <p>copyright &copy; 2022 by에디트립 all rights reserved.</p>
+                                        </address>
+                                    </div>
+                                    <div class="ft-back"><img src="imgs/logo-ft.png" alt=""></div>
+                                </div>
+                            </footer>
+                            <script src="js/main.js"></script>
+</body>
+</html>
