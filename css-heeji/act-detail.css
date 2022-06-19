@@ -70,6 +70,14 @@ header {
   font-size: 1.5rem;
   line-height: 80px;
 }
+#m-menu {display: none;}
+.fa-solid {
+  width: 24px;
+  height: 24px;
+}
+.fa-bars {
+  color: white;
+}
 
 .active {
   background-color: #fff;

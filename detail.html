@@ -56,6 +56,26 @@
                 <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
                 <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
             </ul>
+            <div id="m-menu">
+                <ul class="burger">
+                    <li><i class="fa-solid fa-bars"></i></li>
+                    <li class="d-none"><i class="fa-solid fa-xmark"></i></li>
+                </ul>
+                <ul class="m-menu animate__animated animate__slideInRight">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                    <li>
+                        <ul class="menu-sub">
+                            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+                            <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <div class="tour-top">
@@ -151,7 +171,7 @@
             <div class="ft-back"><img src="images-heeji/logo-ft.png" alt=""></div>
         </d>
     </footer>
-    <script src="script/main.js"></script>
+    <script src="script/hmain.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=84855f7dbe2c82247dc168f4fcd796f2"></script>
     <script>
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 

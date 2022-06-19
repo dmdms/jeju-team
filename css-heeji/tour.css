@@ -919,6 +919,7 @@ address {
     margin: 0 auto;
   }
   .zzim {
+    display: none;
     background: none;
     color: white;
     padding-top: 30px;

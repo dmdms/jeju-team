@@ -70,6 +70,8 @@ header {
   font-size: 1.5rem;
   line-height: 80px;
 }
+#m-menu {display: none;}
+
 
 .active {
   background-color: #fff;
@@ -308,7 +310,6 @@ address {
     padding-top: 30px;
 
 }
-
 /* media */
 @media (max-width: 376px) {
   /* html {width: 100%; overflow-x: hidden;} */
@@ -405,6 +406,8 @@ address {
   }
   .act-de-img2 img {
     width: 200px;
+    right: 0;
+    position: absolute;
   }
   .act-de-img2{
     padding-left: 0;
@@ -420,11 +423,11 @@ address {
 .act-de-title h2 {
   font-size: 20px;
   padding-top: 35px;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 .act-de-title h3 {
   font-size: 15px;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 .act-de-title p {
   font-size: 12px;
@@ -455,7 +458,7 @@ address {
   #map {
     margin: 0 auto;
     width: 375px;
-    height: 400px;
+    height: 300px;
     padding-top: 30px;
 
 }
