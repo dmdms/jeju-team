@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>에디트립</title>
+    <link rel="stylesheet" href="css-heeji/tour.detail.css">
+    <script src="https://kit.fontawesome.com/c3e7a3c02b.js" crossorigin="anonymous"></script>  
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="css-heeji/basket.css">
+</head>
+<body>
+    <!-- cart : modal -->
+    <div id="modal">
+        <h2>check list</h2>
+        <div class="list-cart">
+            <div id="cart-body">
+
+            </div>            
+        </div>        
+        
+        <div id="btn-group">
+            <button id="btn1">경로탐색</button>
+            <button id="btn2">닫기</button>
+        </div>
+    </div>
+    <!-- modal end-->
+    <header>
+        <div class="header-wrap">
+            <div class="logo-wrap">
+                <div class="logo"><a href="index.html"><img src="images-heeji/logo.png" alt="에디트립"></a></div>
+                <div class="logo d-none"><a href="index.html"><img src="images-heeji/logo2.png" alt="에디트립"></a></div>
+            </div>
+            <nav>
+                <ul id="gnb">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                </ul>
+            </nav>
+            <ul class="member">
+                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="tour-top">
+        <div class="tour-text-wrap">
+            <div class="tour-text">
+                <h2>DETAIL</h2>
+                <p>상세정보</p>
+            </div>
+        </div>
+        <img src="images-heeji/act-de1.png" alt="">
+    </div>
+   
+    <div class="home-tour">
+        <div class="home-icon"><a href="index.html" onclick="return false"><i class="fa-solid fa-house"></i></a></div>
+        <div class="home-tour-text">
+            <p><a href="index.html" onclick="return false">홈</a></p>
+            <p>&gt;</p>
+            <p><a href="tour.html" onclick="return false">관광지</a></p>
+            <p>&gt;</p>
+            <p><a href="tour.html" onclick="return false">김녕미로공원</a></p>
+        </div>
+    </div>  
+    
+   <div class="wrap-act">
+       
+        <div class="act-detail-wrap">
+            <div class="act-de-img">
+                <img src="images-heeji/miro1.png" alt="" class="animate__animated animate__fadeInLeft">
+            </div>
+                <div class="act-de-title">
+                    <h2>김녕미로공원</h2>
+                    <h3>kimyoung Maze Park</h3>
+                    <p>김녕미로공원은 사계절 푸르름을 유지하는 <br>
+                        상록수 랠란디(Leylandii)가 수벽을 이루고 있는 <br> 우리나라 최초의 미로공원이다. <br>
+                        랠란디 나무 특유의 향기와, 공원 바닥 내 화산석 ‘송이’는 <br>
+                        헛갈리는 미로를 헤매다 나온 여행자들에게 한결 맑은 기운을 느끼게 만든다.<br>
+                        연인은 물론 남녀노소 누구나 즐거워하는 김녕미로공원은 가족들에게 특히<br> 인기가 많은 코스이며,
+                        제주 도민이 가장 사랑하는 명소로 꼽히기도 했다. </p>
+                </div>
+                    <div class="act-de-img2">
+                        <img src="images-heeji/miro2.png" alt="" class="animate__animated animate__fadeInRight">
+                    </div>
+        </div>
+       
+   </div>
+    <div class="act-wrap-title">
+        <h2>INFORMAION</h2>
+    </div>
+    <div class="act-info-wrap1">
+        <ul class="act-de-info">
+            <li><h2>김녕미로공원</h2>
+                <ul class="act-info-text">
+                    <li>제주 제주시 구좌읍 만장굴길 122</li>
+                </ul>
+            </li>
+            <li><h2>미로 공원을 즐기는 방법</h2>
+                <ul class="act-info-text">
+                    <li>미로 찾기 게임</li>
+                    <li>제주 상징 스탬프 게임</li>
+                    <li>김녕 고양이 왕국 사라진 보물찾기 게임</li>
+                </ul>
+            </li>
+            <li><h2>운영시간</h2>
+                <ul class="act-info-text">
+                    <li> 오전 8시30분 ~ 18시 30분 </li>
+                </ul>
+            </li>
+            <li><h2>요금안내</h2>
+                <ul class="act-info-text">
+                    <li> 성인(20세 이상) - 6,600</li>
+                    <li> 청소년(중,고등학생) -5,500</li>
+                    <li>어린이(36개월 이상) - 4,400</li>
+                    <li>노인(65세 이상) - 5,500</li>
+                </ul>
+            </li>
+            
+        </ul>
+        <div class="miro3"><img src="images-heeji/miro3.png"  alt=""></div>
+    </div>
+    <div class="top-map-wrap">
+        <div class="act-map-wrap">
+            <div class="act-map-title">
+                <img src="images-heeji/map-icon.svg" alt="map-icon">
+                <h2>map</h2>
+            </div>
+            <div id="map"></div>
+        </div>
+        </div>
+    </div>
+    
+<!-- footer -->
+    <div class="topper">
+        <i class="fa-regular fa-circle-up"></i>
+    </div>
+    <footer>
+        <d iv class="footer-wrap">
+            <div class="footer-info">
+                <div class="xnb">
+                    <ul>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                    </ul>
+                </div>
+                <address>
+                    상호 : 에디트립 , 대표자 : 박서준 , 사업자등록번호 : 482-88-01140<br>
+                    주소 : 서울시 서초구 바우뫼로 11인길 25 101호 , TEL : 02.2235.8955~6 , FAX : 02.2237.6185
+                    <p>copyright &copy; 2022 by에디트립 all rights reserved.</p>
+                </address>
+            </div>
+            <div class="ft-back"><img src="images-heeji/logo-ft.png" alt=""></div>
+        </d>
+    </footer>
+    <script src="script/main.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=84855f7dbe2c82247dc168f4fcd796f2"></script>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.245044884167534, 126.41254159298187), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+// 마커가 표시될 위치입니다 
+var markerPosition  = new kakao.maps.LatLng(33.245044884167534, 126.41254159298187); 
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);
+    </script>
+</body>
+</html>
