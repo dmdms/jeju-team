@@ -421,16 +421,16 @@ address {
   padding-top: 100px;
 }
 .slider1{
-  background: url("images-eunji/slide-stay1.jpg") no-repeat center/cover;
+  background: url("../images-eunji/slide-stay1.jpg") no-repeat center/cover;
 }
 .slider2{
-  background: url('images-eunji/slide-stay2.jpg') no-repeat center/cover;
+  background: url('../images-eunji/slide-stay2.jpg') no-repeat center/cover;
 }
 .slider3{
-  background: url('images-eunji/slide-stay3.jpg') no-repeat center/cover;
+  background: url('../images-eunji/slide-stay3.jpg') no-repeat center/cover;
 }
 .slider4{
-  background: url('images-eunji/slide-stay4.jpg') no-repeat center/cover;
+  background: url('../images-eunji/slide-stay4.jpg') no-repeat center/cover;
 }
 .act-wrap {
   width: 1200px;
