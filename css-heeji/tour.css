@@ -540,18 +540,6 @@ address {
   height: 350px;
   width: 350px;
 }
-.dong > li img:hover {
-  height:350px;  
-  color: antiquewhite;
-  transform:scale(1.1, 1.1);  
-  transition: transform.5s;  
-}
-.dong2 > li img:hover {
-  height:350px;  
-  color: antiquewhite;
-  transform:scale(1.1, 1.1);  
-  transition: transform.5s;  
-}
 .dong2 > li img {
   height: 350px;
   width: 350px;
