@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>에디트립 체험페이지</title>
+    <link rel="stylesheet" href="css-heeji/food.css">
+    <script src="https://kit.fontawesome.com/c3e7a3c02b.js" crossorigin="anonymous"></script>  
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <link rel="stylesheet" href="css-heeji/basket.css">
+  <link rel="stylesheet" href="css-heeji/food.css">
+  <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+</head>
+<body>
+     <!-- cart : modal -->
+     <!-- <div id="modal">
+        <h2>check list</h2>
+        <div class="list-cart">
+            <div id="cart-body">
+            </div>            
+        </div>        
+        
+        <div id="btn-group">
+            <button id="btn1">경로탐색</button>
+            <button id="btn2">닫기</button>
+        </div>
+    </div> -->
+    <div id="modal">
+        <h2>MY CART</h2>
+        <div class="list-cart">
+            <div class="cart-img"><img src="imgs/cart1.png" alt="카트"></div>
+
+            <ul class="cart-text">
+                <li class="cart-title">
+                        <p>엑티비티</p>
+                </li>
+                <li class="info">
+                    <p>얼라이브카트</p>
+                    <p class="info2">제주 서귀포시 중문관광로 42</p>
+                </li>
+            </ul>
+            <div class="cancel"><a href="#" onclick="return false"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        
+        <div class="list-museum">
+            <div class="osulloc-img"><img src="imgs/cart3.png" alt="오설록"></div>
+
+            <ul class="museum-text">
+                <li class="museum-title">
+                        <p>관광지</p>
+                </li>
+                <li class="info">
+                    <p>오설록 티 뮤지엄</p>
+                    <p class="info2">제주특별자치도 서귀포시 안덕면 신화역사로 15 </p>
+                </li>
+            </ul>
+            <div class="cancel"><a href="#" onclick="return false"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        <div class="list-hotel">
+            <div class="hotel-img"><img src="imgs/cart2.png" alt="호텔"></div>
+
+            <ul class="hotel-text">
+                <li class="hotel-title">
+                        <p>숙박</p>
+                </li>
+                <li class="info">
+                    <p>오설록 티 뮤지엄</p>
+                    <p class="info2">제주특별자치도 서귀포시 안덕면 신화역사로 15 </p>
+                </li>
+            </ul>
+            <div class="cancel"><a href="#" onclick="return false"><i class="fa-solid fa-xmark"></i></a></div>
+        </div>
+        <div id="btn-group">
+            <button id="btn1">닫기</button>
+            <a href="map.html"><button id="btn2">경로탐색</button></a>
+        </div>
+    </div>
+    <!-- modal end-->
+    
+    <header>
+        <div class="header-wrap">
+            <div class="logo-wrap">
+                <div class="logo"><a href="index.html"><img src="images-heeji/logo.png" alt="에디트립"></a></div>
+                <div class="logo d-none"><a href="index.html"><img src="images-heeji/logo2.png" alt="에디트립"></a></div>
+            </div>
+            <nav>
+                <ul id="gnb">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                </ul>
+            </nav>
+            <ul class="member">
+                <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+                <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
+            </ul>
+            <div id="m-menu">
+                <ul class="burger">
+                    <li><i class="fa-solid fa-bars"></i></li>
+                    <li class="d-none"><i class="fa-solid fa-xmark"></i></li>
+                </ul>
+                <ul class="m-menu animate__animated animate__slideInRight">
+                    <li><a href="tour.html">관광</a></li>
+                    <li><a href="food.html">음식</a></li>
+                    <li><a href="stay.html">숙박</a></li>
+                    <li><a href="fun.html">체험</a></li>
+                    <li><a href="cs.html">고객센터</a></li>
+                    <li>
+                        <ul class="menu-sub">
+                            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="cart-icon"><a href="#" onclick="return false"><i class="fa-solid fa-cart-flatbed"></i></a></li>
+                            <li><a onclick="alert('기능 준비중입니다.');" style="cursor:pointer"><i class="fa-regular fa-user"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="tour-top">
+        <div class="tour-text-wrap">
+            <div class="tour-text">
+                <h2>FOOD</h2>
+                <p>음식</p>
+            </div>
+        </div>
+        <img src="images-heeji/food.main.png" alt="">
+    </div>
+   
+    <div class="home-tour">
+        <div class="home-icon"><a href="index.html" onclick="return false"><i class="fa-solid fa-house"></i></a></div>
+        <div class="home-tour-text">
+            <p><a href="index.html" onclick="return false">홈</a></p>
+            <p>&gt;</p>
+            <p><a href="tour.html" onclick="return false">관광지</a></p>
+        </div>
+    </div>
+     
+    <div class="best-title">
+        <h2>추천 맛집 </h2>
+        <p>BEST</p>
+    </div>
+    <!-- slide -->
+        <ul class="slider">
+            <li class="slider1">
+                <div class="act-wrap">
+                    <img src="images-heeji/one.png" alt="1">
+                    <div class="slider-text">
+                        <h2>제주 김만복 애월점</h2>
+                        <p>제주 제주시 애월읍 애월해안로 255</p>
+                    </div>
+                </div>
+            </li>
+            <li class="slider2">
+                <div class="act-wrap">
+                    <img src="images-heeji/two.png" alt="3">
+                    <div class="slider-text">
+                        <h2>섭지코지로</h2>
+                        <p>제주 서귀포시 성산읍 섭지코지로 43</p>
+                    </div>
+                </div>
+            </li>
+            <li class="slider3">
+                <div class="act-wrap">
+                        <img src="images-heeji/three.png" alt="3">
+                        <div class="slider-text">
+                            <h2>문쏘</h2>
+                            <p>제주 제주시 한림읍 한림상로 15-5 문쏘 본점</p>
+                        </div>
+                    </div>
+            </li>
+            <li class="slider4">
+                <div class="act-wrap">
+                    <img src="images-heeji/four.png" alt="3">
+                    <div class="slider-text">
+                        <h2>네거리식당</h2>
+                        <p>제주 서귀포시 서문로29번길 20</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    <!-- DESTINATIONS TAB  -->
+    <div class="tab-title">
+        <h2>맛집</h2>
+        <p>RESTAURANT</p>
+    </div>
+    <div class="spot-tab-wrap">
+        <div class="spot">
+            <div class="spot-title">
+                <p class="tab1"><a href="#" onclick="return false">동쪽</a></p>
+                <p class="tab2"><a href="#" onclick="return false">서쪽</a> </p>
+                <p class="tab3"><a href="#" onclick="return false">남쪽</a></p>
+                <p class="tab4"><a href="#" onclick="return false">북쪽</a></p>
+            </div>
+            <div class="spot-list1">
+                <ul class="dong">
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img1.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">제주옥</a></p>
+                        <div class="tag">
+                            <p>#전복요리</p>
+                            <p>#해산물</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img2.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">제주 진미 마돈가</a></p>
+                        <div class="tag">
+                            <p>#제주 말고기</p>
+                            <p>#흑돼지</p>
+                            <p>#코스</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img3.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">네거리식당</a></p>
+                        <div class="tag">
+                            <p>#갈치조림</p>
+                            <p>#생선구이</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="dong2">
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img4.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">섭지코지로</a></p>
+                        <div class="tag">
+                            <p>#고등어회</p>
+                            <p>#딱새우회</p>
+                            <p>#회맛집</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img5.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">올래 국수 제주시점</a></p>
+                        <div class="tag">
+                            <p>#고기국수</p>
+                            <p>#제주공항</p>
+                            <p>#시내맛집</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img6.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">제주 김만복 애월점</a></p>
+                        <div class="tag">
+                            <p>#김만복김밥</p>
+                            <p>#피크닉 도시락</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="spot-list2">
+                <ul class="dong">
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img4.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">섭지코지로</a></p>
+                        <div class="tag">
+                            <p>#고등어회</p>
+                            <p>#딱새우회</p>
+                            <p>#회맛집</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img2.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">올래 국수 제주시점</a></p>
+                        <div class="tag">
+                            <p>#고기국수</p>
+                            <p>#제주공항</p>
+                            <p>#시내맛집</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img6.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">제주 김만복 애월점</a></p>
+                        <div class="tag">
+                            <p>#김만복김밥</p>
+                            <p>#피크닉 도시락</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="dong2">
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img3.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">제주옥</a></p>
+                        <div class="tag">
+                            <p>#전복요리</p>
+                            <p>#해산물</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img5.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">제주 진미 마돈가</a></p>
+                        <div class="tag">
+                            <p>#제주 말고기</p>
+                            <p>#흑돼지</p>
+                            <p>#코스</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img1.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">네거리식당</a></p>
+                        <div class="tag">
+                            <p>#갈치조림</p>
+                            <p>#생선구이</p>
+                        </div>
+                    </li>
+                </ul>
+            </div><div class="spot-list3">
+                <ul class="dong">
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img3.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">네거리식당</a></p>
+                        <div class="tag">
+                            <p>#갈치조림</p>
+                            <p>#생선구이</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img6.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">제주 진미 마돈가</a></p>
+                        <div class="tag">
+                            <p>#제주 말고기</p>
+                            <p>#흑돼지</p>
+                            <p>#코스</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img5.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">제주옥</a></p>
+                        <div class="tag">
+                            <p>#전복요리</p>
+                            <p>#해산물</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="dong2">
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img1.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">올래 국수 제주시점</a></p>
+                        <div class="tag">
+                            <p>#고기국수</p>
+                            <p>#제주공항</p>
+                            <p>#시내맛집</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img2.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">제주 김만복 애월점</a></p>
+                        <div class="tag">
+                            <p>#김만복김밥</p>
+                            <p>#피크닉 도시락</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img4.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">섭지코지로</a></p>
+                        <div class="tag">
+                            <p>#고등어회</p>
+                            <p>#딱새우회</p>
+                            <p>#회맛집</p>
+                        </div>
+                    </li>
+                </ul>
+            </div><div class="spot-list4">
+                <ul class="dong">
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img6.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">섭지코지로</a></p>
+                        <div class="tag">
+                            <p>#고등어회</p>
+                            <p>#딱새우회</p>
+                            <p>#회맛집</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img5.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">제주 진미 마돈가</a></p>
+                        <div class="tag">
+                            <p>#제주 말고기</p>
+                            <p>#흑돼지</p>
+                            <p>#코스</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img2.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">제주옥</a></p>
+                        <div class="tag">
+                            <p>#전복요리</p>
+                            <p>#해산물</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="dong2">
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img3.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">네거리식당</a></p>
+                        <div class="tag">
+                            <p>#갈치조림</p>
+                            <p>#생선구이</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img6.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">제주 김만복 애월점</a></p>
+                        <div class="tag">
+                            <p>#김만복김밥</p>
+                            <p>#피크닉 도시락</p>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="return false"><img src="list-img/food-img1.jpg" alt=""></a>
+                        <div class="zzim-wrap">
+                            <div class="zzim">
+                                <a href="#" onclick="alert('장바구니에 담겼습니다.');" style="cursor:pointer"><i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                        <p><a href="#" onclick="return false">올래 국수 제주시점</a></p>
+                        <div class="tag">
+                            <p>#고기국수</p>
+                            <p>#제주공항</p>
+                            <p>#시내맛집</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- footer -->
+    <div class="topper">
+        <i class="fa-regular fa-circle-up"></i>
+    </div>
+    <footer>
+        <d iv class="footer-wrap">
+            <div class="footer-info">
+                <div class="xnb">
+                    <ul>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                    </ul>
+                </div>
+                <address>
+                    상호 : 에디트립 , 대표자 : 박서준 , 사업자등록번호 : 482-88-01140<br>
+                    주소 : 서울시 서초구 바우뫼로 11인길 25 101호 , TEL : 02.2235.8955~6 , FAX : 02.2237.6185
+                    <p>copyright &copy; 2022 by에디트립 all rights reserved.</p>
+                </address>
+            </div>
+            <div class="ft-back"><img src="images-heeji/logo-ft.png" alt=""></div>
+        </d>
+    </footer>
+    <script src="script/hmain.js"></script>
+</body>
+</html>
