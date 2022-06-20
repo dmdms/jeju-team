@@ -470,9 +470,11 @@ header {
   border-right: 1px solid #999;
 }
 
+.theme-icon li img {
+  transition: all ease-in-out .1s;
+}
 .theme-icon li:hover img {
   transform: scale(1.1);
-  transition: all ease-in-out 0.3s;
 }
 
 .theme-best {
