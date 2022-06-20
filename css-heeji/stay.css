@@ -421,16 +421,16 @@ address {
   padding-top: 100px;
 }
 .slider1{
-  background: url("../images-heeji/slide-stay1.png") no-repeat center/cover;
+  background: url("images-eunji/slide-stay1.jpg") no-repeat center/cover;
 }
 .slider2{
-  background: url('../images-heeji/slide-stay2.png') no-repeat center/cover;
+  background: url('images-eunji/slide-stay2.jpg') no-repeat center/cover;
 }
 .slider3{
-  background: url('../images-heeji/slide-stay3.png') no-repeat center/cover;
+  background: url('images-eunji/slide-stay3.jpg') no-repeat center/cover;
 }
 .slider4{
-  background: url('../images-heeji/slide-stay4.png') no-repeat center/cover;
+  background: url('images-eunji/slide-stay4.jpg') no-repeat center/cover;
 }
 .act-wrap {
   width: 1200px;
@@ -546,18 +546,6 @@ address {
 .dong2 > li img {
   height: 350px;
   width: 350px;
-}
-.dong > li img:hover {
-  height:350px;  /* 사진크기 조절 */
-  color: antiquewhite;
-  transform:scale(1.1, 1.1);  /* 가로2배 새로 1.5배 로 커짐 */
-  transition: transform.5s;  /* 커지는 시간 */
-}
-.dong2 > li img:hover {
-  height:350px;  /* 사진크기 조절 */
-  color: antiquewhite;
-  transform:scale(1.1, 1.1);  /* 가로2배 새로 1.5배 로 커짐 */
-  transition: transform.5s;  /* 커지는 시간 */
 }
 .zzim-wrap {
   max-width: 75px;

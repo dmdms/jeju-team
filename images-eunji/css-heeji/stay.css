@@ -234,6 +234,13 @@ header {
   color: #fff;
 }
 #m-menu {display: none;}
+.fa-solid {
+  width: 24px;
+  height: 24px;
+}
+.fa-bars {
+  color: white;
+}
 #gnb {
   color: #fff;
   width: 500px;
@@ -256,16 +263,7 @@ header {
   font-size: 1.5rem;
   line-height: 80px;
 }
-.m-menu{
-  display: none;
-}
-.fa-solid {
-  width: 24px;
-  height: 24px;
-}
-.fa-bars {
-  color: white;
-}
+
 .active {
   background-color: #fff;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.253);
@@ -423,16 +421,16 @@ address {
   padding-top: 100px;
 }
 .slider1{
-  background: url("../images-heeji/slide1.png") no-repeat center/cover;
+  background: url("../images-eunji/slide-stay1.jpg") no-repeat center/cover;
 }
 .slider2{
-  background: url('../images-heeji/slide2.png') no-repeat center/cover;
+  background: url('../images-eunji/slide-stay2.jpg') no-repeat center/cover;
 }
 .slider3{
-  background: url('../images-heeji/slide3.png') no-repeat center/cover;
+  background: url('../images-eunji/slide-stay3.jpg') no-repeat center/cover;
 }
 .slider4{
-  background: url('../images-heeji/slide4.png') no-repeat center/cover;
+  background: url('../images-eunji/slide-stay4.jpg') no-repeat center/cover;
 }
 .act-wrap {
   width: 1200px;
@@ -492,7 +490,6 @@ address {
   padding-left: 280px;
 }
 
-
 .spot-title p:hover {
   color: #003893;
   border: 3px solid #003893;
@@ -514,6 +511,12 @@ address {
   height: 60px;
   margin: 10px;
   line-height: 50px;
+}
+
+.heart {
+  height: 50px;
+  width: 50px;
+  position: relative;
 }
 
 .dong {
@@ -557,7 +560,7 @@ address {
   display: block;
   display: inline-block;
   background-color: white;
-  padding: 3px 7px;
+  padding: 5px 7px;
   border-radius: 30px;
 }
 .zzim :hover {
@@ -578,9 +581,7 @@ address {
   padding: 3px 7px;
 }
 
-
 /*# sourceMappingURL=tour.css.map */
-
 /* media */
 @media screen and (max-width: 376px) {
   html {width: 100%; overflow-x: hidden;}
@@ -707,16 +708,16 @@ address {
     padding-top: 100px;
   }
   .slider1{
-    background: url("../images-heeji/mo-tour-slide1.png") no-repeat center/cover;
+    background: url("../images-heeji/slide-stay1.png") no-repeat center/cover;
   }
   .slider2{
-    background: url('../images-heeji/slide2.png') no-repeat center/cover;
+    background: url("../images-heeji/slide-stay2.png") no-repeat center/cover;
   }
   .slider3{
-    background: url('../images-heeji/slide3.png') no-repeat center/cover;
+    background: url("../images-heeji/slide-stay3.png") no-repeat center/cover;
   }
   .slider4{
-    background: url('../images-heeji/slide4.png') no-repeat center/cover;
+    background: url("../images-heeji/slide-stay4.png") no-repeat center/cover;
   }
   .best-title h2 {
   font-weight: bolder;
