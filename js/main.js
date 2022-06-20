@@ -6,6 +6,8 @@ $(function(){
     result();
     resultDelete();
     mobileMenu();
+    search();
+    searchBtn();
 })
 function popup(){
     $(".cart-icon").click(function(){
@@ -126,5 +128,17 @@ function mobileMenu(){
             $(this).addClass("d-none");
             $(this).prev().removeClass("d-none");
         }
+    });
+}
+function search(){
+    $(document).ready(function(){
+        $("#search_input").keydown(function(key){
+            if(key.keyCode == 13) {
+                alert("기능 준비중입니다..ㅜ");
+            }
+        });
+        $(".search-btn").click(function(){
+            alert("기능 준비중입니다..ㅜ");
+        })
     });
 }
